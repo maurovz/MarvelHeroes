@@ -5,11 +5,9 @@ struct HeroListView: View {
   
   var body: some View {
     NavigationView {
-      List {
-        ForEach(self.heroListViewModel.heroes, id: \.id) { hero in
-          VStack {
-            Text("Hero's Name")
-          }
+      List(self.heroListViewModel.heroes, id: \.id) { hero in
+        VStack {
+          Text(hero.name)
         }
       }
     }
