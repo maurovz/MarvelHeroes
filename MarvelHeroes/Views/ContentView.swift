@@ -1,11 +1,3 @@
-//
-//  ContentView.swift
-//  MarvelHeroes
-//
-//  Created by Mauricio Vazquez on 6/15/20.
-//  Copyright © 2020 MauVZ. All rights reserved.
-//
-
 import SwiftUI
 
 struct ContentView: View {
