@@ -1,17 +1,23 @@
 import SwiftUI
 
 struct HeroListView: View {
-    var body: some View {
-      NavigationView {
-        List {
-          Text("Hero's Name")
+  @ObservedObject private var heroListViewModel = HeroListViewModel()
+  
+  var body: some View {
+    NavigationView {
+      List {
+        ForEach(self.heroListViewModel.heroes, id: \.id) { hero in
+          VStack {
+            Text("Hero's Name")
+          }
         }
       }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        HeroListView()
-    }
+  static var previews: some View {
+    HeroListView()
+  }
 }
