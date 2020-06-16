@@ -7,7 +7,9 @@ struct HeroListView: View {
     NavigationView {
       List(self.heroListViewModel.heroes, id: \.id) { hero in
         VStack {
-          Text(hero.name)
+          NavigationLink(destination: HeroDetailView(hero: hero)) {
+              Text(hero.name)
+          }.navigationBarTitle("Hero Stats")
         }
       }
     }
