@@ -1,6 +1,5 @@
 import Foundation
 
-
 struct Constants {
   static let apiURL = "https://gateway.marvel.com:443/v1/public/"
   static let heroesEndpoint = "characters?apikey=\(apiKey)&hash=\(hash)&ts=\(timeStamp)"
