@@ -13,6 +13,7 @@
 		5425907F2498DFC500C52113 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907E2498DFC500C52113 /* APIResponse.swift */; };
 		542590812498EAB200C52113 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542590802498EAB200C52113 /* HeroDetailView.swift */; };
 		5425908D24992E5500C52113 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5425908F24992E5500C52113 /* Localizable.strings */; };
+		547A3DBB249AB7CC005AD507 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
 		54FCF92E2497D2ED008157F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92D2497D2ED008157F2 /* AppDelegate.swift */; };
 		54FCF9302497D2ED008157F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92F2497D2ED008157F2 /* SceneDelegate.swift */; };
 		54FCF9332497D2ED008157F2 /* MarvelHeroes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */; };
@@ -51,6 +52,7 @@
 		542590802498EAB200C52113 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		5425908E24992E5500C52113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5425909024992E9E00C52113 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		547A3DBA249AB7CC005AD507 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		54FCF92A2497D2ED008157F2 /* MarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FCF92D2497D2ED008157F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FCF92F2497D2ED008157F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				5425907A2498103600C52113 /* WebService.swift */,
+				547A3DBA249AB7CC005AD507 /* HttpClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				54FCF9662497F04A008157F2 /* HeroListViewModel.swift in Sources */,
 				54FCF9682497F068008157F2 /* Hero.swift in Sources */,
 				5425907D249810D600C52113 /* Constants.swift in Sources */,
+				547A3DBB249AB7CC005AD507 /* HttpClient.swift in Sources */,
 				542590812498EAB200C52113 /* HeroDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
