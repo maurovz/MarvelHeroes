@@ -1,12 +1,11 @@
 import Foundation
 
 class WebService {
-  
   func getHeroes(completion: @escaping (([Hero]?) -> Void)) {
     guard let url = URL(string: Constants.apiURL + Constants.heroesEndpoint) else {
       fatalError("Url is not correct")
     }
-    URLSession.shared.dataTask(with: url) { data, response, error in
+    URLSession.shared.dataTask(with: url) { data, _, error in
       guard let data = data, error == nil else {
         DispatchQueue.main.async {
           completion(nil)
