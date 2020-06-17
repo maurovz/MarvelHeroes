@@ -9,7 +9,7 @@ struct HeroListView: View {
         VStack {
           NavigationLink(destination: HeroDetailView(hero: hero)) {
               Text(hero.name)
-          }.navigationBarTitle("Hero Stats")
+          }.navigationBarTitle(NSLocalizedString("Hero Information", comment: "List title"))
         }
       }
     }
