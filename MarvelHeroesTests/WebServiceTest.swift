@@ -1,33 +1,30 @@
-//
-//  WebServiceTest.swift
-//  MarvelHeroesTests
-//
-//  Created by Mauricio Vazquez on 6/18/20.
-//  Copyright © 2020 MauVZ. All rights reserved.
-//
-
 import XCTest
 
 class WebServiceTest: XCTestCase {
+  private var webService: WebService!
+  private let session = MockURLSession()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  override func setUp() {
+    super.setUp()
+    let httpClient = HttpClient(session: session)
+    webService = WebService(httpClient: httpClient)
+  }
+
+  func testGetHeroesResponseIsNil() throws {
+    webService.getHeroes { hero in
+      XCTAssertNil(hero)
     }
+  }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+  func testGetHeroesResponseHasHeroes() throws {
+    let heroData = MockResponse().mockContentData
+    session.nextData = heroData
+    let asyncWebServiceExpectation = expectation(description: "Async WebService started")
+    webService.getHeroes { heroes in
+      guard let hero = heroes?.first else { return }
+      XCTAssertEqual(hero.name, "3-D Man")
+      asyncWebServiceExpectation.fulfill()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    waitForExpectations(timeout: 5, handler: nil)
+  }
 }

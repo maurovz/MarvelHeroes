@@ -10,6 +10,12 @@
 		54145DB2249ABCDD00B80943 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB1249ABCDD00B80943 /* MockURLSession.swift */; };
 		54145DB5249ABFAC00B80943 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
 		54145DB7249B8C2A00B80943 /* WebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB6249B8C2A00B80943 /* WebServiceTest.swift */; };
+		54145DB8249B8CB800B80943 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907A2498103600C52113 /* WebService.swift */; };
+		54145DB9249B8F5300B80943 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF9672497F068008157F2 /* Hero.swift */; };
+		54145DBA249B8F6900B80943 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907C249810D600C52113 /* Constants.swift */; };
+		54145DBC249B8F9200B80943 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907E2498DFC500C52113 /* APIResponse.swift */; };
+		54145DBE249B92C400B80943 /* heroesResponseMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 54145DBD249B92C400B80943 /* heroesResponseMock.json */; };
+		54145DC1249B9AEC00B80943 /* HeroesResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DC0249B9AEC00B80943 /* HeroesResponseMock.swift */; };
 		542590782497F3A900C52113 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542590772497F3A900C52113 /* HeroViewModel.swift */; };
 		5425907B2498103600C52113 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907A2498103600C52113 /* WebService.swift */; };
 		5425907D249810D600C52113 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907C249810D600C52113 /* Constants.swift */; };
@@ -50,6 +56,8 @@
 /* Begin PBXFileReference section */
 		54145DB1249ABCDD00B80943 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		54145DB6249B8C2A00B80943 /* WebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTest.swift; sourceTree = "<group>"; };
+		54145DBD249B92C400B80943 /* heroesResponseMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroesResponseMock.json; sourceTree = "<group>"; };
+		54145DC0249B9AEC00B80943 /* HeroesResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesResponseMock.swift; sourceTree = "<group>"; };
 		542590772497F3A900C52113 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		5425907A2498103600C52113 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		5425907C249810D600C52113 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -102,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54145DBF249B9AB800B80943 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				54145DBD249B92C400B80943 /* heroesResponseMock.json */,
+				54145DB1249ABCDD00B80943 /* MockURLSession.swift */,
+				54145DC0249B9AEC00B80943 /* HeroesResponseMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		542590792498101500C52113 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,10 +176,10 @@
 		54FCF9462497D2F0008157F2 /* MarvelHeroesTests */ = {
 			isa = PBXGroup;
 			children = (
+				54145DBF249B9AB800B80943 /* Mocks */,
 				54FCF9472497D2F0008157F2 /* HTTPClientTests.swift */,
 				54145DB6249B8C2A00B80943 /* WebServiceTest.swift */,
 				54FCF9492497D2F0008157F2 /* Info.plist */,
-				54145DB1249ABCDD00B80943 /* MockURLSession.swift */,
 			);
 			path = MarvelHeroesTests;
 			sourceTree = "<group>";
@@ -339,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54145DBE249B92C400B80943 /* heroesResponseMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +418,12 @@
 				54145DB2249ABCDD00B80943 /* MockURLSession.swift in Sources */,
 				54145DB5249ABFAC00B80943 /* HttpClient.swift in Sources */,
 				54145DB7249B8C2A00B80943 /* WebServiceTest.swift in Sources */,
+				54145DB8249B8CB800B80943 /* WebService.swift in Sources */,
+				54145DC1249B9AEC00B80943 /* HeroesResponseMock.swift in Sources */,
+				54145DBA249B8F6900B80943 /* Constants.swift in Sources */,
+				54145DBC249B8F9200B80943 /* APIResponse.swift in Sources */,
 				54FCF9482497D2F0008157F2 /* HTTPClientTests.swift in Sources */,
+				54145DB9249B8F5300B80943 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
