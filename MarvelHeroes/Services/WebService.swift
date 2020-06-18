@@ -1,11 +1,17 @@
 import Foundation
 
 class WebService {
+  let httpClient: HttpClient
+
+  init(httpClient: HttpClient) {
+    self.httpClient = httpClient
+  }
+
   func getHeroes(completion: @escaping (([Hero]?) -> Void)) {
     guard let url = URL(string: Constants.apiURL + Constants.heroesEndpoint) else {
       fatalError("Url is not correct")
     }
-    URLSession.shared.dataTask(with: url) { data, _, error in
+    httpClient.get(url: url) { data, error in
       guard let data = data, error == nil else {
         DispatchQueue.main.async {
           completion(nil)
@@ -20,6 +26,6 @@ class WebService {
       } catch {
         print(error)
       }
-    }.resume()
+    }
   }
 }
