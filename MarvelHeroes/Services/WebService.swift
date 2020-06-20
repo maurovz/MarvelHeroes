@@ -3,7 +3,7 @@ import Foundation
 class WebService {
   let httpClient: HttpClient
 
-  init(httpClient: HttpClient) {
+  init(httpClient: HttpClient = HttpClient(session: URLSession(configuration: .default))) {
     self.httpClient = httpClient
   }
 

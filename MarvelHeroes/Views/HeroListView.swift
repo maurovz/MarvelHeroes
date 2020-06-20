@@ -5,7 +5,7 @@ struct HeroListView: View {
 
   var body: some View {
     NavigationView {
-      List(self.heroListViewModel.heroes, id: \.heroID) { hero in
+      List(self.heroListViewModel.heroes, id: \.name) { hero in
         VStack {
           NavigationLink(destination: HeroDetailView(hero: hero)) {
               Text(hero.name)
