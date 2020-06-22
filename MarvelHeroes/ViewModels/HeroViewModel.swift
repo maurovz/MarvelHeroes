@@ -1,7 +1,13 @@
-import Foundation
+import SwiftUI
 
-struct HeroViewModel {
-  let hero: Hero
+class HeroViewModel: ObservableObject {
+  @Published var hero: Hero
+  @Published var show = false
+  @Published var color: Color = .blue
+  
+  init(hero: Hero) {
+    self.hero = hero
+  }
 
   var heroID: Int {
     return hero.heroID

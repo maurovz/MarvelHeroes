@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 struct HeroDetailsViewModel {
   let hero: HeroDetails
@@ -9,5 +10,5 @@ struct HeroDetailsViewModel {
 
   var description: String {
     return hero.heroDescription ?? ""
-  }
+  }  
 }
