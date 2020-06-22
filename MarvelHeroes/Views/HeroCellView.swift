@@ -11,7 +11,7 @@ struct HeroCellView: View {
   @Binding var isScrollable: Bool
   var hero: HeroViewModel
   private let screenSize = UIScreen.main.bounds
-  
+
   var body: some View {
     ZStack(alignment: .top) {
       VStack(alignment: .leading, spacing: 30.0) {
@@ -21,12 +21,12 @@ struct HeroCellView: View {
         Text(hero.description)
       }
       .padding(30)
-      .frame(maxWidth: show ? .infinity : self.screenSize.width - 60, maxHeight: show ? .infinity : 280, alignment: .top)
+      .frame(maxWidth: show ? .infinity : self.screenSize.width - 60,
+             maxHeight: show ? .infinity : 280, alignment: .top)
       .offset(y: show ? 460 : 0)
       .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
       .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
       .opacity(show ? 1 : 0)
-      
       VStack {
         HStack(alignment: .top) {
           VStack(alignment: .leading, spacing: 8.0) {
@@ -55,7 +55,6 @@ struct HeroCellView: View {
           .cornerRadius(25)
           .frame(maxWidth: .infinity)
           .frame(height: (show ? 300 : 200), alignment: .top)
-        
       }
       .padding(show ? 30 : 20)
       .padding(.top, show ? 30 : 0)
@@ -68,10 +67,9 @@ struct HeroCellView: View {
           DragGesture().onChanged { value in
             guard value.translation.height < 300 else { return }
             guard value.translation.height > 0 else { return }
-            
             self.activeView = value.translation
           }
-          .onEnded { value in
+          .onEnded { _ in
             if self.activeView.height > 50 {
               self.show = false
               self.active = false
@@ -94,11 +92,12 @@ struct HeroCellView: View {
             self.isScrollable = true
           }
       }
-      
       if isScrollable {
-        HeroDetailView(hero: hero, show: $show, active: $active, activeIndex: $activeIndex, isScrollable: $isScrollable, bounds: bounds)
+        HeroDetailView(hero: hero, show: $show, active: $active,
+                       activeIndex: $activeIndex, isScrollable: $isScrollable, bounds: bounds)
           .background(Color.white)
-          .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
+          .clipShape(RoundedRectangle(cornerRadius: show ?
+            getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
           .animation(nil)
           .transition(.identity)
       }
@@ -113,10 +112,9 @@ struct HeroCellView: View {
         DragGesture().onChanged { value in
           guard value.translation.height < 300 else { return }
           guard value.translation.height > 50 else { return }
-          
           self.activeView = value.translation
         }
-        .onEnded { value in
+        .onEnded { _ in
           if self.activeView.height > 50 {
             self.show = false
             self.active = false

@@ -8,7 +8,7 @@ struct HeroDetailView: View {
   @Binding var activeIndex: Int
   @Binding var isScrollable: Bool
   var bounds: GeometryProxy
-  
+
   var body: some View {
     ScrollView {
       VStack(spacing: 0) {
@@ -52,7 +52,6 @@ struct HeroDetailView: View {
         .background(hero.color)
         .clipShape(RoundedRectangle(cornerRadius: getCardCornerRadius(bounds: bounds), style: .continuous))
         .shadow(color: Color(.blue).opacity(0.3), radius: 20, x: 0, y: 20)
-        
         VStack(alignment: .leading, spacing: 30.0) {
           Text(hero.name)
           Text("Hero Description")
@@ -65,11 +64,3 @@ struct HeroDetailView: View {
     .edgesIgnoringSafeArea(.all)
   }
 }
-
-//struct CourseDetail_Previews: PreviewProvider {
-//  static var previews: some View {
-//    GeometryReader { bounds in
-//      CourseDetail(course: Course(title: "Prototype Designs in SwiftUI", subtitle: "18 Sections", color: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), show: false), show: .constant(true), active: .constant(true), activeIndex: .constant(-1), isScrollable: .constant(true), bounds: bounds)
-//    }
-//  }
-//}

@@ -5,7 +5,7 @@ class HeroViewModel: ObservableObject {
   @Published var show = false
   @Published var color: Color = .blue
   private let urlSeparator = "."
-  
+
   init(hero: Hero) {
     self.hero = hero
   }

@@ -10,5 +10,5 @@ struct HeroDetailsViewModel {
 
   var description: String {
     return hero.heroDescription ?? ""
-  }  
+  }
 }
