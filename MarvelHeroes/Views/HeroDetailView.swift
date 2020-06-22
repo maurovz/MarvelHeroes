@@ -1,4 +1,5 @@
 import SwiftUI
+import KingfisherSwiftUI
 
 struct HeroDetailView: View {
   var hero: HeroViewModel
@@ -37,12 +38,12 @@ struct HeroDetailView: View {
             }
           }
           Spacer()
-          Image("Avatar")
+          KFImage(URL(string: hero.thumbnailImage))
             .resizable()
             .aspectRatio(contentMode: .fit)
             .cornerRadius(25)
             .frame(maxWidth: .infinity)
-            .frame(height: 250, alignment: .top)
+            .frame(height: 300, alignment: .top)
         }
         .padding(show ? 30 : 20)
         .padding(.top, show ? 30 : 0)

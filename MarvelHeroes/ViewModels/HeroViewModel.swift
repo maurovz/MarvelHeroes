@@ -4,6 +4,7 @@ class HeroViewModel: ObservableObject {
   @Published var hero: Hero
   @Published var show = false
   @Published var color: Color = .blue
+  private let urlSeparator = "."
   
   init(hero: Hero) {
     self.hero = hero
@@ -22,6 +23,6 @@ class HeroViewModel: ObservableObject {
   }
 
   var thumbnailImage: String {
-    return hero.thumbnail.path + hero.thumbnail.imageExtension
+    return hero.thumbnail.path + urlSeparator + hero.thumbnail.imageExtension
   }
 }

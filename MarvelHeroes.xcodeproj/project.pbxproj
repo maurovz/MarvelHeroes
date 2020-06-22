@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5408682A24A1530C004D47E2 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5408682924A1530C004D47E2 /* KingfisherSwiftUI */; };
 		54145DB2249ABCDD00B80943 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB1249ABCDD00B80943 /* MockURLSession.swift */; };
 		54145DB5249ABFAC00B80943 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
 		54145DB7249B8C2A00B80943 /* WebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB6249B8C2A00B80943 /* WebServiceTest.swift */; };
@@ -98,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5408682A24A1530C004D47E2 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +279,9 @@
 			dependencies = (
 			);
 			name = MarvelHeroes;
+			packageProductDependencies = (
+				5408682924A1530C004D47E2 /* KingfisherSwiftUI */,
+			);
 			productName = MarvelHeroes;
 			productReference = 54FCF92A2497D2ED008157F2 /* MarvelHeroes.app */;
 			productType = "com.apple.product-type.application";
@@ -350,6 +355,9 @@
 				es,
 			);
 			mainGroup = 54FCF9212497D2ED008157F2;
+			packageReferences = (
+				5408682824A1530C004D47E2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 54FCF92B2497D2ED008157F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -776,6 +784,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5408682824A1530C004D47E2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5408682924A1530C004D47E2 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5408682824A1530C004D47E2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */ = {

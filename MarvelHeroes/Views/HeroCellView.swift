@@ -1,4 +1,5 @@
 import SwiftUI
+import KingfisherSwiftUI
 
 struct HeroCellView: View {
   @Binding var show: Bool
@@ -22,7 +23,6 @@ struct HeroCellView: View {
       .padding(30)
       .frame(maxWidth: show ? .infinity : self.screenSize.width - 60, maxHeight: show ? .infinity : 280, alignment: .top)
       .offset(y: show ? 460 : 0)
-      .background(Color("background"))
       .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
       .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
       .opacity(show ? 1 : 0)
@@ -49,12 +49,12 @@ struct HeroCellView: View {
           }
         }
         Spacer()
-        Image("Avatar")
+        KFImage(URL(string: hero.thumbnailImage))
           .resizable()
           .aspectRatio(contentMode: .fit)
           .cornerRadius(25)
           .frame(maxWidth: .infinity)
-          .frame(height: (show ? 250 : 170), alignment: .top)
+          .frame(height: (show ? 300 : 200), alignment: .top)
         
       }
       .padding(show ? 30 : 20)
