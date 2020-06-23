@@ -31,7 +31,8 @@ struct HeroListView: View {
                   activeView: self.$activeView,
                   bounds: bounds,
                   isScrollable: self.$isScrollable,
-                  hero: self.heroListViewModel.heroes[index]
+                  hero: self.heroListViewModel.heroes[index],
+                  hero2: self.heroListViewModel.heroes2[index]
                 )
                   .offset(y: self.heroListViewModel.heroes[index].show ? -geometry.frame(in: .global).minY : 0)
                   .opacity(self.activeIndex != index && self.active ? 0 : 1)

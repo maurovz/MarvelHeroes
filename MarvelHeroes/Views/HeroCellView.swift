@@ -10,15 +10,16 @@ struct HeroCellView: View {
   var bounds: GeometryProxy
   @Binding var isScrollable: Bool
   var hero: HeroViewModel
+  var hero2: HeroDetailsViewModel
   private let screenSize = UIScreen.main.bounds
 
   var body: some View {
     ZStack(alignment: .top) {
       VStack(alignment: .leading, spacing: 30.0) {
-        Text(hero.name)
+        Text(hero2.name)
         Text(LocalizedStringKey("Hero's Description"))
           .font(.title).bold()
-        Text(hero.description)
+        Text(hero2.description)
       }
       .padding(30)
       .frame(maxWidth: show ? .infinity : self.screenSize.width - 60,
@@ -27,7 +28,7 @@ struct HeroCellView: View {
       VStack {
         HStack(alignment: .top) {
           VStack(alignment: .leading, spacing: 8.0) {
-            Text(hero.name)
+            Text(hero2.name)
               .font(.system(size: 24, weight: .bold))
               .foregroundColor(.white)
           }
@@ -46,7 +47,7 @@ struct HeroCellView: View {
           }
         }
         Spacer()
-        KFImage(URL(string: hero.thumbnailImage))
+        KFImage(URL(string: hero2.thumbnailImage))
           .resizable()
           .aspectRatio(contentMode: .fit)
           .cornerRadius(25)
@@ -56,7 +57,7 @@ struct HeroCellView: View {
       .padding(show ? 30 : 20)
       .padding(.top, show ? 30 : 0)
       .frame(maxWidth: show ? .infinity : self.screenSize.width - 60, maxHeight: show ? 460 : 280)
-      .background(hero.color)
+      .background(hero2.color)
       .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
       .gesture(
         show ?
@@ -89,13 +90,13 @@ struct HeroCellView: View {
           }
       }
       if isScrollable {
-        HeroDetailView(hero: hero, show: $show, active: $active,
-                       activeIndex: $activeIndex, isScrollable: $isScrollable, bounds: bounds)
-          .background(Color.white)
-          .clipShape(RoundedRectangle(cornerRadius: show ?
-            getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
-          .animation(nil)
-          .transition(.identity)
+//        HeroDetailView(hero: hero, show: $show, active: $active,
+//                       activeIndex: $activeIndex, isScrollable: $isScrollable, bounds: bounds)
+//          .background(Color.white)
+//          .clipShape(RoundedRectangle(cornerRadius: show ?
+//            getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
+//          .animation(nil)
+//          .transition(.identity)
       }
     }
     .frame(height: show ? bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom : 280)

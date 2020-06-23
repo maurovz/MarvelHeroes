@@ -14,8 +14,11 @@ class HeroListViewModel: ObservableObject {
   func syncHeroes() {
     webService.getHeroes { heroes in
       guard let heroes = heroes else { return }
-      self.saveHeroesToCoreData(heroService: HeroService(), heroes: heroes)
-      self.heroes = heroes.map(HeroViewModel.init)
+      if self.deleteOldHeroesFromCoreData(heroService: HeroService()) {
+        self.saveHeroesToCoreData(heroService: HeroService(), heroes: heroes)
+        self.heroes = heroes.map(HeroViewModel.init)
+        self.heroes2 = self.fetchHeroesFromCoreData(heroService: HeroService())
+      }
     }
   }
 
@@ -26,5 +29,9 @@ class HeroListViewModel: ObservableObject {
   func fetchHeroesFromCoreData(heroService: HeroService) -> [HeroDetailsViewModel] {
     let fetchedHeroes = heroService.loadHeroesFromCoreData()
     return fetchedHeroes.map(HeroDetailsViewModel.init)
+  }
+
+  func deleteOldHeroesFromCoreData(heroService: HeroService) -> Bool {
+    return heroService.deleteOldHeroesFromCoreData()
   }
 }
