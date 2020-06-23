@@ -20,7 +20,6 @@ struct HeroListView: View {
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 30)
               .padding(.top, 30)
-              .blur(radius: self.active ? 20 : 0)
             ForEach(self.heroListViewModel.heroes.indices, id: \.self) { index in
               GeometryReader { geometry in
                 HeroCellView(

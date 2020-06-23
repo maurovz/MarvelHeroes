@@ -18,7 +18,6 @@
 		54145DBE249B92C400B80943 /* heroesResponseMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 54145DBD249B92C400B80943 /* heroesResponseMock.json */; };
 		54145DC1249B9AEC00B80943 /* HeroesResponseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DC0249B9AEC00B80943 /* HeroesResponseMock.swift */; };
 		54145DC6249E27CF00B80943 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DC5249E27CF00B80943 /* CoreDataStack.swift */; };
-		542590782497F3A900C52113 /* HeroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542590772497F3A900C52113 /* HeroViewModel.swift */; };
 		5425907B2498103600C52113 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907A2498103600C52113 /* WebService.swift */; };
 		5425907D249810D600C52113 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907C249810D600C52113 /* Constants.swift */; };
 		5425907F2498DFC500C52113 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907E2498DFC500C52113 /* APIResponse.swift */; };
@@ -64,7 +63,6 @@
 		54145DBD249B92C400B80943 /* heroesResponseMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroesResponseMock.json; sourceTree = "<group>"; };
 		54145DC0249B9AEC00B80943 /* HeroesResponseMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesResponseMock.swift; sourceTree = "<group>"; };
 		54145DC5249E27CF00B80943 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		542590772497F3A900C52113 /* HeroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewModel.swift; sourceTree = "<group>"; };
 		5425907A2498103600C52113 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		5425907C249810D600C52113 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5425907E2498DFC500C52113 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				54FCF9652497F04A008157F2 /* HeroListViewModel.swift */,
-				542590772497F3A900C52113 /* HeroViewModel.swift */,
 				545EA5CF249E84900069189C /* HeroDetailsViewModel.swift */,
 			);
 			path = ViewModels;
@@ -427,7 +424,6 @@
 				54FCF92E2497D2ED008157F2 /* AppDelegate.swift in Sources */,
 				54145DC6249E27CF00B80943 /* CoreDataStack.swift in Sources */,
 				54AA900424A10A7200D0EB51 /* HeroCellView.swift in Sources */,
-				542590782497F3A900C52113 /* HeroViewModel.swift in Sources */,
 				545EA5D0249E84900069189C /* HeroDetailsViewModel.swift in Sources */,
 				5425907B2498103600C52113 /* WebService.swift in Sources */,
 				5425907F2498DFC500C52113 /* APIResponse.swift in Sources */,

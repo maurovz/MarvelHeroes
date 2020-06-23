@@ -2,7 +2,7 @@ import SwiftUI
 import KingfisherSwiftUI
 
 struct HeroDetailView: View {
-  var hero: HeroViewModel
+  var hero: HeroDetailsViewModel
   @Binding var show: Bool
   @Binding var active: Bool
   @Binding var activeIndex: Int

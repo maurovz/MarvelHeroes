@@ -2,7 +2,7 @@ import Foundation
 import CoreData
 
 class HeroListViewModel: ObservableObject {
-  @Published var heroes: [HeroViewModel] = [HeroViewModel]()
+  @Published var heroes: [HeroDetailsViewModel] = [HeroDetailsViewModel]()
   private var webService: WebService
 
   init(webService: WebService = WebService()) {
@@ -11,10 +11,16 @@ class HeroListViewModel: ObservableObject {
   }
 
   func syncHeroes() {
-    webService.getHeroes { heroes in
-      guard let heroes = heroes else { return }
-      self.saveHeroesToCoreData(heroService: HeroService(), heroes: heroes)
-      self.heroes = heroes.map(HeroViewModel.init)
+    webService.getHeroes { heroes, errors in
+      if errors == .noNetwork {
+        self.heroes = self.fetchHeroesFromCoreData(heroService: HeroService())
+      } else {
+        guard let heroes = heroes else { return }
+        if self.deleteOldHeroesFromCoreData(heroService: HeroService()) {
+          self.saveHeroesToCoreData(heroService: HeroService(), heroes: heroes)
+          self.heroes = self.fetchHeroesFromCoreData(heroService: HeroService())
+        }
+      }
     }
   }
 
@@ -22,8 +28,12 @@ class HeroListViewModel: ObservableObject {
     heroService.saveHeroesToCoreData(heroes: heroes)
   }
 
-//  func fetchHeroesFromCoreData(heroService: HeroService) -> [HeroDetailsViewModel] {
-//    let fetchedHeroes = heroService.loadHeroesFromCoreData()
-//    return fetchedHeroes.map(HeroDetailsViewModel.init)
-//  }
+  func fetchHeroesFromCoreData(heroService: HeroService) -> [HeroDetailsViewModel] {
+    let fetchedHeroes = heroService.loadHeroesFromCoreData()
+    return fetchedHeroes.map(HeroDetailsViewModel.init)
+  }
+
+  func deleteOldHeroesFromCoreData(heroService: HeroService) -> Bool {
+    return heroService.deleteOldHeroesFromCoreData()
+  }
 }
