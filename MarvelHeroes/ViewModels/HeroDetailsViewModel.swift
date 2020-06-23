@@ -4,7 +4,7 @@ import SwiftUI
 class HeroDetailsViewModel: ObservableObject {
   @Published var hero: HeroDetails
   @Published var show = false
-  @Published var color: Color = Color("heroBackground1")
+  @Published var color: Color = Color(Constants.heroBackground)
 
   init(hero: HeroDetails) {
     self.hero = hero

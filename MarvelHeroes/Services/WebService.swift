@@ -16,7 +16,7 @@ class WebService {
 
   func getHeroes(completion: @escaping GetHeroesCompleteClosure) {
     guard let url = URL(string: Constants.apiURL + Constants.heroesEndpoint) else {
-      fatalError("Url is not correct")
+      fatalError(Constants.urlError)
     }
     httpClient.get(url: url) { data, error in
       guard let data = data, error == nil else {
