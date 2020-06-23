@@ -15,7 +15,7 @@ struct HeroListView: View {
       ZStack {
         ScrollView {
           VStack(spacing: 30) {
-            Text("Top Marvel Heroes")
+            Text(LocalizedStringKey("Latest Marvel Heroes"))
               .font(.largeTitle).bold()
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(.leading, 30)

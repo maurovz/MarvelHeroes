@@ -16,17 +16,14 @@ struct HeroCellView: View {
     ZStack(alignment: .top) {
       VStack(alignment: .leading, spacing: 30.0) {
         Text(hero.name)
-        Text("Hero Description")
+        Text(LocalizedStringKey("Hero's Description"))
           .font(.title).bold()
         Text(hero.description)
       }
       .padding(30)
       .frame(maxWidth: show ? .infinity : self.screenSize.width - 60,
              maxHeight: show ? .infinity : 280, alignment: .top)
-      .offset(y: show ? 460 : 0)
-      .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
-      .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
-      .opacity(show ? 1 : 0)
+        .offset(y: show ? 460 : 0)
       VStack {
         HStack(alignment: .top) {
           VStack(alignment: .leading, spacing: 8.0) {
@@ -61,7 +58,6 @@ struct HeroCellView: View {
       .frame(maxWidth: show ? .infinity : self.screenSize.width - 60, maxHeight: show ? 460 : 280)
       .background(hero.color)
       .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
-      .shadow(color: Color(.black).opacity(0.3), radius: 20, x: 0, y: 20)
       .gesture(
         show ?
           DragGesture().onChanged { value in
@@ -103,7 +99,7 @@ struct HeroCellView: View {
       }
     }
     .frame(height: show ? bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom : 280)
-    .scaleEffect(1 - self.activeView.height / 1000)
+    .scaleEffect(1 - self.activeView.height / 300)
     .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10.0, z: 0))
     .hueRotation(Angle(degrees: Double(self.activeView.height)))
     .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
