@@ -1,7 +1,14 @@
-import Foundation
+import SwiftUI
 
-struct HeroViewModel {
-  let hero: Hero
+class HeroViewModel: ObservableObject {
+  @Published var hero: Hero
+  @Published var show = false
+  @Published var color: Color = Color("heroBackground1")
+  private let urlSeparator = "."
+
+  init(hero: Hero) {
+    self.hero = hero
+  }
 
   var heroID: Int {
     return hero.heroID
@@ -16,6 +23,6 @@ struct HeroViewModel {
   }
 
   var thumbnailImage: String {
-    return hero.thumbnail.path + hero.thumbnail.imageExtension
+    return hero.thumbnail.path + urlSeparator + hero.thumbnail.imageExtension
   }
 }

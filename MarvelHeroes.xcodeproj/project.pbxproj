@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5408682A24A1530C004D47E2 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5408682924A1530C004D47E2 /* KingfisherSwiftUI */; };
 		54145DB2249ABCDD00B80943 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB1249ABCDD00B80943 /* MockURLSession.swift */; };
 		54145DB5249ABFAC00B80943 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
 		54145DB7249B8C2A00B80943 /* WebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB6249B8C2A00B80943 /* WebServiceTest.swift */; };
@@ -26,6 +27,7 @@
 		545EA5D0249E84900069189C /* HeroDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5CF249E84900069189C /* HeroDetailsViewModel.swift */; };
 		545EA5D2249E8A390069189C /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5D1249E8A390069189C /* HeroService.swift */; };
 		547A3DBB249AB7CC005AD507 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
+		54AA900424A10A7200D0EB51 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA900324A10A7200D0EB51 /* HeroCellView.swift */; };
 		54FCF92E2497D2ED008157F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92D2497D2ED008157F2 /* AppDelegate.swift */; };
 		54FCF9302497D2ED008157F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92F2497D2ED008157F2 /* SceneDelegate.swift */; };
 		54FCF9332497D2ED008157F2 /* MarvelHeroes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */; };
@@ -72,6 +74,7 @@
 		545EA5CF249E84900069189C /* HeroDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewModel.swift; sourceTree = "<group>"; };
 		545EA5D1249E8A390069189C /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
 		547A3DBA249AB7CC005AD507 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		54AA900324A10A7200D0EB51 /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
 		54FCF92A2497D2ED008157F2 /* MarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FCF92D2497D2ED008157F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FCF92F2497D2ED008157F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5408682A24A1530C004D47E2 /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +133,7 @@
 		54145DC7249E28D800B80943 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */,
 				54145DC5249E27CF00B80943 /* CoreDataStack.swift */,
 				545EA5D1249E8A390069189C /* HeroService.swift */,
 			);
@@ -175,7 +180,6 @@
 				54FCF9612497D3EB008157F2 /* Models */,
 				54FCF9602497D3E1008157F2 /* Views */,
 				54FCF93E2497D2F0008157F2 /* Info.plist */,
-				54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */,
 				54FCF9382497D2F0008157F2 /* Preview Content */,
 			);
 			path = MarvelHeroes;
@@ -213,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				54FCF9342497D2ED008157F2 /* HeroListView.swift */,
+				54AA900324A10A7200D0EB51 /* HeroCellView.swift */,
 				542590802498EAB200C52113 /* HeroDetailView.swift */,
 			);
 			path = Views;
@@ -274,6 +279,9 @@
 			dependencies = (
 			);
 			name = MarvelHeroes;
+			packageProductDependencies = (
+				5408682924A1530C004D47E2 /* KingfisherSwiftUI */,
+			);
 			productName = MarvelHeroes;
 			productReference = 54FCF92A2497D2ED008157F2 /* MarvelHeroes.app */;
 			productType = "com.apple.product-type.application";
@@ -347,6 +355,9 @@
 				es,
 			);
 			mainGroup = 54FCF9212497D2ED008157F2;
+			packageReferences = (
+				5408682824A1530C004D47E2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 54FCF92B2497D2ED008157F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -415,6 +426,7 @@
 			files = (
 				54FCF92E2497D2ED008157F2 /* AppDelegate.swift in Sources */,
 				54145DC6249E27CF00B80943 /* CoreDataStack.swift in Sources */,
+				54AA900424A10A7200D0EB51 /* HeroCellView.swift in Sources */,
 				542590782497F3A900C52113 /* HeroViewModel.swift in Sources */,
 				545EA5D0249E84900069189C /* HeroDetailsViewModel.swift in Sources */,
 				5425907B2498103600C52113 /* WebService.swift in Sources */,
@@ -771,6 +783,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5408682824A1530C004D47E2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5408682924A1530C004D47E2 /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5408682824A1530C004D47E2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */ = {

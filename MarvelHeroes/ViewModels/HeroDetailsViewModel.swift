@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 struct HeroDetailsViewModel {
   let hero: HeroDetails
