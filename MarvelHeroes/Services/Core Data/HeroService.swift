@@ -21,7 +21,7 @@ struct HeroService {
       return []
     }
   }
-  
+
   func deleteOldHeroesFromCoreData() -> Bool {
     let context = CoreDataStack.persistentContainer.viewContext
     do {
