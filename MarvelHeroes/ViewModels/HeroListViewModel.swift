@@ -3,6 +3,7 @@ import CoreData
 
 class HeroListViewModel: ObservableObject {
   @Published var heroes: [HeroViewModel] = [HeroViewModel]()
+  @Published var heroes2: [HeroDetailsViewModel] = [HeroDetailsViewModel]()
   private var webService: WebService
 
   init(webService: WebService = WebService()) {
@@ -22,8 +23,8 @@ class HeroListViewModel: ObservableObject {
     heroService.saveHeroesToCoreData(heroes: heroes)
   }
 
-//  func fetchHeroesFromCoreData(heroService: HeroService) -> [HeroDetailsViewModel] {
-//    let fetchedHeroes = heroService.loadHeroesFromCoreData()
-//    return fetchedHeroes.map(HeroDetailsViewModel.init)
-//  }
+  func fetchHeroesFromCoreData(heroService: HeroService) -> [HeroDetailsViewModel] {
+    let fetchedHeroes = heroService.loadHeroesFromCoreData()
+    return fetchedHeroes.map(HeroDetailsViewModel.init)
+  }
 }

@@ -7,6 +7,7 @@ struct HeroService {
       let heroDetails = HeroDetails(context: context)
       heroDetails.name = hero.name
       heroDetails.heroDescription = hero.description
+      heroDetails.thumbnailURL = hero.thumbnail.path + "." + hero.thumbnail.imageExtension
       CoreDataStack.saveContext()
     }
   }
