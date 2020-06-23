@@ -5,20 +5,16 @@ The app consists of a list of the newest Marvel heroes, with it's own detail vie
 ## Build status
 Build status of continus integration with Travis
 
-[![Build Status](https://travis-ci.org/akashnimare/foco.svg?branch=master)](https://travis-ci.org/akashnimare/foco)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
-
-## Code style
-MarvelAPIMVVM follows the SwiftLint Guidelines
-
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![Build Status](https://travis-ci.com/maurovz/MarvelHeroes.svg?branch=develop)](https://travis-ci.com/maurovz/MarvelHeroes)
  
 ## Screenshots
+![](https://i.imgur.com/U2Pded7.png)
+![](https://i.imgur.com/PV4qNhF.png)
 
 ## Features
 MVVM Architecture
 SwiftUI & Combine usage
-No third-party frameworks.
+Minimal third-party frameworks. Working on replacing the only framework (Kingfisher) with a custom framework.
 Unit Testing
 
 ## Installation
@@ -35,6 +31,7 @@ To make request to the Marvel API, you need three parameters: "apikey", "ts" and
 If you want more information regarding the Marvel API, make sure to check their documentation https://developer.marvel.com/docs
 
 ## Tests
+Run the tests with Command + T
 
 ## Contribute
 If you want to help out and expand this project demonstration, feel free to create a Pull Request.
