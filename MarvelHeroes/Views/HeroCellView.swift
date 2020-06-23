@@ -15,7 +15,6 @@ struct HeroCellView: View {
   var body: some View {
     ZStack(alignment: .top) {
       VStack(alignment: .leading, spacing: 30.0) {
-        Text(hero.name)
         Text(LocalizedStringKey("Hero's Description"))
           .font(.title).bold()
         Text(hero.description)

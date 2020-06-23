@@ -19,12 +19,16 @@ class HttpClient {
 
   func get( url: URL, callback: @escaping CompleteClosure ) {
     var request = URLRequest(url: url)
-    request.httpMethod = "GET"
+    request.httpMethod = HttpMethod.get.rawValue
     let task = session.dataTask(with: request) { (data, _, error) in
       callback(data, error)
     }
     task.resume()
   }
+}
+
+enum HttpMethod: String {
+  case get = "GET"
 }
 
 extension URLSession: URLSessionProtocol {

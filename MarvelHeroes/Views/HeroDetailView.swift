@@ -52,7 +52,6 @@ struct HeroDetailView: View {
         .background(hero.color)
         .clipShape(RoundedRectangle(cornerRadius: getCardCornerRadius(bounds: bounds), style: .continuous))
         VStack(alignment: .leading, spacing: 30.0) {
-          Text(hero.name)
           Text(LocalizedStringKey("Hero's Description"))
             .font(.title).bold()
           Text(hero.description)
