@@ -23,6 +23,7 @@
 		5425907F2498DFC500C52113 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5425907E2498DFC500C52113 /* APIResponse.swift */; };
 		542590812498EAB200C52113 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542590802498EAB200C52113 /* HeroDetailView.swift */; };
 		5425908D24992E5500C52113 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5425908F24992E5500C52113 /* Localizable.strings */; };
+		543FD53224A274D100DD11C1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543FD53124A274D100DD11C1 /* ActivityIndicator.swift */; };
 		545EA5D0249E84900069189C /* HeroDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5CF249E84900069189C /* HeroDetailsViewModel.swift */; };
 		545EA5D2249E8A390069189C /* HeroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545EA5D1249E8A390069189C /* HeroService.swift */; };
 		547A3DBB249AB7CC005AD507 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
@@ -69,6 +70,7 @@
 		542590802498EAB200C52113 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
 		5425908E24992E5500C52113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5425909024992E9E00C52113 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		543FD53124A274D100DD11C1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		545EA5CF249E84900069189C /* HeroDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsViewModel.swift; sourceTree = "<group>"; };
 		545EA5D1249E8A390069189C /* HeroService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroService.swift; sourceTree = "<group>"; };
 		547A3DBA249AB7CC005AD507 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		54FCF9632497D403008157F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				543FD53124A274D100DD11C1 /* ActivityIndicator.swift */,
 				54FCF93B2497D2F0008157F2 /* LaunchScreen.storyboard */,
 				54FCF9362497D2F0008157F2 /* Assets.xcassets */,
 			);
@@ -433,6 +436,7 @@
 				54FCF9662497F04A008157F2 /* HeroListViewModel.swift in Sources */,
 				545EA5D2249E8A390069189C /* HeroService.swift in Sources */,
 				54FCF9682497F068008157F2 /* Hero.swift in Sources */,
+				543FD53224A274D100DD11C1 /* ActivityIndicator.swift in Sources */,
 				5425907D249810D600C52113 /* Constants.swift in Sources */,
 				547A3DBB249AB7CC005AD507 /* HttpClient.swift in Sources */,
 				542590812498EAB200C52113 /* HeroDetailView.swift in Sources */,
@@ -631,7 +635,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.maurovz.MarvelHeroes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -651,7 +655,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.maurovz.MarvelHeroes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

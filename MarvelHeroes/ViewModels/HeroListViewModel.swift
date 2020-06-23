@@ -3,6 +3,7 @@ import CoreData
 
 class HeroListViewModel: ObservableObject {
   @Published var heroes: [HeroDetailsViewModel] = [HeroDetailsViewModel]()
+  @Published var isLoadingHeroes = false
   private var webService: WebService
 
   init(webService: WebService = WebService()) {
@@ -11,7 +12,9 @@ class HeroListViewModel: ObservableObject {
   }
 
   func syncHeroes() {
+    isLoadingHeroes = true
     webService.getHeroes { heroes, errors in
+      self.isLoadingHeroes = false
       if errors == .noNetwork {
         self.heroes = self.fetchHeroesFromCoreData(heroService: HeroService())
       } else {
