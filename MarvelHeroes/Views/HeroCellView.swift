@@ -58,24 +58,6 @@ struct HeroCellView: View {
       .frame(maxWidth: show ? .infinity : self.screenSize.width - 60, maxHeight: show ? 460 : 280)
       .background(hero.color)
       .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
-      .gesture(
-        show ?
-          DragGesture().onChanged { value in
-            guard value.translation.height < 300 else { return }
-            guard value.translation.height > 0 else { return }
-            self.activeView = value.translation
-          }
-          .onEnded { _ in
-            if self.activeView.height > 50 {
-              self.show = false
-              self.active = false
-              self.activeIndex = -1
-              self.isScrollable = false
-            }
-            self.activeView = .zero
-          }
-          : nil
-      )
         .onTapGesture {
           self.show.toggle()
           self.active.toggle()
