@@ -11,8 +11,8 @@ class WebServiceTest: XCTestCase {
   }
 
   func testGetHeroesResponseIsNil() throws {
-    webService.getHeroes { hero in
-      XCTAssertNil(hero)
+    webService.getHeroes { _, errors in
+      XCTAssertEqual(errors, .noNetwork)
     }
   }
 
@@ -20,9 +20,10 @@ class WebServiceTest: XCTestCase {
     let heroData = MockResponse().mockContentData
     session.nextData = heroData
     let asyncWebServiceExpectation = expectation(description: "Async WebService started")
-    webService.getHeroes { heroes in
+    webService.getHeroes { heroes, errors in
       guard let hero = heroes?.first else { return }
       XCTAssertEqual(hero.name, "3-D Man")
+      XCTAssertNil(errors)
       asyncWebServiceExpectation.fulfill()
     }
     waitForExpectations(timeout: 5, handler: nil)
