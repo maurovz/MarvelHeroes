@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		5403AB1724A892FB00BDBC38 /* HeroListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB1624A892FB00BDBC38 /* HeroListViewController.swift */; };
 		5403AB1924A8930C00BDBC38 /* HeroListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5403AB1824A8930C00BDBC38 /* HeroListStoryboard.storyboard */; };
-		5403AB1C24A896C000BDBC38 /* HeroListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB1B24A896C000BDBC38 /* HeroListCollectionViewCell.swift */; };
+		5403AB3F24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB3D24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift */; };
+		5403AB4024A8B4D700BDBC38 /* HeroListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5403AB3E24A8B4D700BDBC38 /* HeroListCollectionViewCell.xib */; };
 		5408682A24A1530C004D47E2 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5408682924A1530C004D47E2 /* KingfisherSwiftUI */; };
 		54145DB2249ABCDD00B80943 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB1249ABCDD00B80943 /* MockURLSession.swift */; };
 		54145DB5249ABFAC00B80943 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
@@ -64,7 +65,8 @@
 /* Begin PBXFileReference section */
 		5403AB1624A892FB00BDBC38 /* HeroListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListViewController.swift; sourceTree = "<group>"; };
 		5403AB1824A8930C00BDBC38 /* HeroListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroListStoryboard.storyboard; sourceTree = "<group>"; };
-		5403AB1B24A896C000BDBC38 /* HeroListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListCollectionViewCell.swift; sourceTree = "<group>"; };
+		5403AB3D24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListCollectionViewCell.swift; sourceTree = "<group>"; };
+		5403AB3E24A8B4D700BDBC38 /* HeroListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroListCollectionViewCell.xib; sourceTree = "<group>"; };
 		54145DB1249ABCDD00B80943 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		54145DB6249B8C2A00B80943 /* WebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTest.swift; sourceTree = "<group>"; };
 		54145DBD249B92C400B80943 /* heroesResponseMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroesResponseMock.json; sourceTree = "<group>"; };
@@ -129,7 +131,8 @@
 		5403AB1A24A8969800BDBC38 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				5403AB1B24A896C000BDBC38 /* HeroListCollectionViewCell.swift */,
+				5403AB3D24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift */,
+				5403AB3E24A8B4D700BDBC38 /* HeroListCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5403AB4024A8B4D700BDBC38 /* HeroListCollectionViewCell.xib in Resources */,
 				54FCF93D2497D2F0008157F2 /* LaunchScreen.storyboard in Resources */,
 				5425908D24992E5500C52113 /* Localizable.strings in Resources */,
 				54FCF93A2497D2F0008157F2 /* Preview Assets.xcassets in Resources */,
@@ -433,7 +437,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -454,7 +459,7 @@
 				54FCF9662497F04A008157F2 /* HeroListViewModel.swift in Sources */,
 				545EA5D2249E8A390069189C /* HeroService.swift in Sources */,
 				5403AB1724A892FB00BDBC38 /* HeroListViewController.swift in Sources */,
-				5403AB1C24A896C000BDBC38 /* HeroListCollectionViewCell.swift in Sources */,
+				5403AB3F24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift in Sources */,
 				54FCF9682497F068008157F2 /* Hero.swift in Sources */,
 				543FD53224A274D100DD11C1 /* ActivityIndicator.swift in Sources */,
 				5425907D249810D600C52113 /* Constants.swift in Sources */,
