@@ -6,12 +6,25 @@ class HeroListViewController: UIViewController {
   @IBOutlet weak var heroListCollectionView: UICollectionView!
   private let screenSize = UIScreen.main.bounds
   @IBOutlet weak var featuredPageControl: UIPageControl!
-//  let images = ["hero", "avatar"]
+  let images = ["avatar", "comic"]
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setupCollectionView()
     addNavigationBarLogo(image: UIImage(named: "logo"))
+    setPageControlNumberOfPages(pages: images.count)
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    setCurrentPageControlPage(page: 0)
+  }
+
+  private func setPageControlNumberOfPages(pages: Int) {
+    featuredPageControl.numberOfPages = pages
+  }
+
+  private func setCurrentPageControlPage(page: Int) {
+    featuredPageControl.currentPage = page
   }
 
   private func addNavigationBarLogo(image: UIImage?) {
@@ -96,7 +109,7 @@ extension HeroListViewController: UICollectionViewDataSource {
     if collectionView == heroListCollectionView {
       return 10
     } else {
-      return 10
+      return images.count
     }
   }
 
@@ -107,7 +120,7 @@ extension HeroListViewController: UICollectionViewDataSource {
         else {
           fatalError("Error dequeuing Reusable Cell")
       }
-      cell.configure(with: UIImage(named: "comic")!)
+      cell.configure(with: UIImage(named: images[indexPath.row]))
       return cell
     } else {
       guard let cell = collectionView.dequeueReusableCell(
@@ -115,8 +128,15 @@ extension HeroListViewController: UICollectionViewDataSource {
         else {
           fatalError("Error dequeuing Reusable Cell")
       }
-      cell.configure(with: UIImage(named: "hero")!)
+      cell.configure(with: UIImage(named: "hero"))
       return cell
     }
+  }
+}
+
+extension HeroListViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView,
+                      willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    setCurrentPageControlPage(page: indexPath.row)
   }
 }

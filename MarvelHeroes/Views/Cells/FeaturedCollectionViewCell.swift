@@ -8,7 +8,7 @@ class FeaturedCollectionViewCell: UICollectionViewCell {
     super.awakeFromNib()
   }
 
-  public func configure(with image: UIImage) {
+  public func configure(with image: UIImage?) {
     imageView.image = image
   }
 }

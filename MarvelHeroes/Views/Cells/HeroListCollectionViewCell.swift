@@ -22,7 +22,7 @@ class HeroListCollectionViewCell: UICollectionViewCell {
     blurrView.sendSubviewToBack(blurredView)
   }
 
-  public func configure(with image: UIImage) {
+  public func configure(with image: UIImage?) {
     imageView.image = image
   }
 }
