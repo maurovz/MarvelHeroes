@@ -9,9 +9,10 @@ class HeroListViewModel: ObservableObject {
   init(webService: WebService = WebService()) {
     self.webService = webService
     syncHeroes()
+    syncComics()
   }
 
-  func syncHeroes() {
+  private func syncHeroes() {
     isLoadingHeroes = true
     webService.getHeroes { heroes, errors in
       self.isLoadingHeroes = false
@@ -26,17 +27,21 @@ class HeroListViewModel: ObservableObject {
       }
     }
   }
+  
+  private func syncComics() {
+    
+  }
 
-  func saveHeroesToCoreData(heroService: HeroService, heroes: [Hero]) {
+  private func saveHeroesToCoreData(heroService: HeroService, heroes: [Hero]) {
     heroService.saveHeroesToCoreData(heroes: heroes)
   }
 
-  func fetchHeroesFromCoreData(heroService: HeroService) -> [HeroDetailsViewModel] {
+  private func fetchHeroesFromCoreData(heroService: HeroService) -> [HeroDetailsViewModel] {
     let fetchedHeroes = heroService.loadHeroesFromCoreData()
     return fetchedHeroes.map(HeroDetailsViewModel.init)
   }
 
-  func deleteOldHeroesFromCoreData(heroService: HeroService) -> Bool {
+  private func deleteOldHeroesFromCoreData(heroService: HeroService) -> Bool {
     return heroService.deleteOldHeroesFromCoreData()
   }
 }

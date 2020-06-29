@@ -1,14 +1,14 @@
 import Foundation
 
-struct Hero: Decodable {
-  let heroID: Int
-  let name: String
+struct Comic: Decodable {
+  let comicID: Int
+  let title: String
   let description: String
   let thumbnail: Thumbnail
 
   enum CodingKeys: String, CodingKey {
-    case heroID = "id"
-    case name
+    case comicID = "id"
+    case title
     case description
     case thumbnail
   }

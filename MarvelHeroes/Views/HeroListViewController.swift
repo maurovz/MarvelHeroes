@@ -4,38 +4,33 @@ import Combine
 class HeroListViewController: UIViewController {
   @IBOutlet weak var featuredHeroesCollectionView: UICollectionView!
   @IBOutlet weak var heroListCollectionView: UICollectionView!
-  private let screenSize = UIScreen.main.bounds
   @IBOutlet weak var featuredPageControl: UIPageControl!
+  private let screenSize = UIScreen.main.bounds
   let images = ["comic"]
-  private var heroListViewModel = HeroListViewModel()
+  private let heroListViewModel = HeroListViewModel()
   private var cancellables: Set<AnyCancellable> = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setupCollectionView()
     addNavigationBarLogo(image: UIImage(named: "logo"))
-    setPageControlNumberOfPages(pages: images.count)
-    bindModel()
-  }
-
-  private func bindModel() {
-    heroListViewModel.$heroes
-      .receive(on: RunLoop.main)
-      .sink { (_) in
-        self.heroListCollectionView.reloadData()
-    }.store(in: &cancellables)
-  }
-
-  func loadHeroes() {
-    heroListViewModel.syncHeroes()
+    setupPageControl()
+    bindHeroListViewModel()
   }
 
   override func viewDidAppear(_ animated: Bool) {
     setCurrentPageControlPage(page: 0)
   }
 
-  private func setPageControlNumberOfPages(pages: Int) {
-    featuredPageControl.numberOfPages = pages
+  private func bindHeroListViewModel() {
+    heroListViewModel.$heroes.sink { _ in
+        self.heroListCollectionView.reloadData()
+    }.store(in: &cancellables)
+  }
+
+  private func setupPageControl() {
+    let numberOfPages = images.count
+    featuredPageControl.numberOfPages = numberOfPages
   }
 
   private func setCurrentPageControlPage(page: Int) {
@@ -116,8 +111,8 @@ extension HeroListViewController: UICollectionViewDataSource {
       let sidesMargin: CGFloat = 0
       return UIEdgeInsets(top: sidesMargin, left: sidesMargin, bottom: sidesMargin, right: sidesMargin)
     } else {
-      let leftSideMargins: CGFloat = 10
-      return UIEdgeInsets(top: 0, left: leftSideMargins, bottom: 0, right: 0)
+      let sideMargins: CGFloat = 10
+      return UIEdgeInsets(top: 0, left: sideMargins, bottom: 0, right: sideMargins)
     }
   }
 
