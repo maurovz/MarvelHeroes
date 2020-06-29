@@ -1,18 +1,26 @@
 import UIKit
 
 class HeroListViewController: UIViewController {
-  @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var featuredHeroesCollectionView: UICollectionView!
+  @IBOutlet weak var heroListCollectionView: UICollectionView!
   private let screenSize = UIScreen.main.bounds
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setupCollectionView()
+    addLogo(image: UIImage(named: "logo"))
+  }
+
+  func addLogo(image: UIImage?) {
+    let imageView = UIImageView(image: image)
+    imageView.contentMode = .scaleAspectFit
+    self.navigationItem.titleView = imageView
   }
 
   override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
     super.traitCollectionDidChange(previousTraitCollection)
     guard previousTraitCollection != nil else { return }
-    collectionView?.collectionViewLayout.invalidateLayout()
+    heroListCollectionView?.collectionViewLayout.invalidateLayout()
   }
 }
 
@@ -21,8 +29,8 @@ extension HeroListViewController: UICollectionViewDelegateFlowLayout {
     let layout = UICollectionViewFlowLayout()
     layout.minimumInteritemSpacing = 5
     layout.minimumLineSpacing = 10
-    collectionView.collectionViewLayout = layout
-    collectionView.register(UINib(nibName: HeroListCollectionViewCell.identifier,
+    heroListCollectionView.collectionViewLayout = layout
+    heroListCollectionView.register(UINib(nibName: HeroListCollectionViewCell.identifier,
                                   bundle: .main), forCellWithReuseIdentifier: HeroListCollectionViewCell.identifier)
   }
 

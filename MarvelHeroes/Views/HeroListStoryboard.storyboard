@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zpg-l8-JWt">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="315" width="414" height="547"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="xrA-Mx-4xy">
@@ -31,19 +32,56 @@
                                     <outlet property="delegate" destination="Adv-Kf-Ote" id="kSu-aw-EsF"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently Updates Heroes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-C8-NVS">
+                                <rect key="frame" x="20" y="282" width="374" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="uK4-S3-sN7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kLz-pT-1ME">
+                                <rect key="frame" x="0.0" y="88" width="414" height="179"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F1l-Uo-Rjc">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="S7D-Cj-HMI">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LNx-EJ-EJ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="kLz-pT-1ME" firstAttribute="leading" secondItem="6nm-d7-QpN" secondAttribute="leading" id="MQp-v1-jcb"/>
                             <constraint firstItem="6nm-d7-QpN" firstAttribute="bottom" secondItem="zpg-l8-JWt" secondAttribute="bottom" id="ULi-Od-nQw"/>
+                            <constraint firstItem="kLz-pT-1ME" firstAttribute="top" secondItem="6nm-d7-QpN" secondAttribute="top" id="WvG-Bu-AhG"/>
+                            <constraint firstItem="kLz-pT-1ME" firstAttribute="height" secondItem="yLj-Ff-a7L" secondAttribute="height" multiplier="0.2" id="bEo-wN-A8X"/>
                             <constraint firstItem="zpg-l8-JWt" firstAttribute="leading" secondItem="6nm-d7-QpN" secondAttribute="leading" id="bZ6-cs-AVw"/>
-                            <constraint firstItem="zpg-l8-JWt" firstAttribute="top" secondItem="6nm-d7-QpN" secondAttribute="top" id="qq8-A7-eN8"/>
+                            <constraint firstItem="GYs-C8-NVS" firstAttribute="leading" secondItem="6nm-d7-QpN" secondAttribute="leading" constant="20" id="dZo-M4-G6t"/>
+                            <constraint firstItem="kLz-pT-1ME" firstAttribute="trailing" secondItem="6nm-d7-QpN" secondAttribute="trailing" id="hCF-sl-x89"/>
+                            <constraint firstItem="6nm-d7-QpN" firstAttribute="trailing" secondItem="GYs-C8-NVS" secondAttribute="trailing" constant="20" id="kEG-xs-ouH"/>
+                            <constraint firstItem="GYs-C8-NVS" firstAttribute="top" secondItem="kLz-pT-1ME" secondAttribute="bottom" constant="15" id="nbV-h2-roY"/>
+                            <constraint firstItem="zpg-l8-JWt" firstAttribute="top" secondItem="GYs-C8-NVS" secondAttribute="bottom" constant="10" id="q5J-Ef-Udy"/>
                             <constraint firstItem="6nm-d7-QpN" firstAttribute="trailing" secondItem="zpg-l8-JWt" secondAttribute="trailing" id="uin-cu-nOX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6nm-d7-QpN"/>
                     </view>
                     <navigationItem key="navigationItem" id="0O8-4G-ZG2"/>
                     <connections>
-                        <outlet property="collectionView" destination="zpg-l8-JWt" id="bhC-Cm-vRN"/>
+                        <outlet property="featuredHeroesCollectionView" destination="kLz-pT-1ME" id="XJW-Xv-f1k"/>
+                        <outlet property="heroListCollectionView" destination="zpg-l8-JWt" id="2bj-u0-NJg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biC-sc-mFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -55,7 +93,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pVh-yc-Vyi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6kJ-2E-yx7">
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="6kJ-2E-yx7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
