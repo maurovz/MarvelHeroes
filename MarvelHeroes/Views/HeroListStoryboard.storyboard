@@ -7,6 +7,11 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AVENGEANCE HEROIC AVENGER BD.ttf">
+            <string>AvengeanceHeroicAvengerBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Hero List View Controller-->
         <scene sceneID="Qoo-ik-1NC">
@@ -17,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zpg-l8-JWt">
-                                <rect key="frame" x="0.0" y="315" width="414" height="547"/>
+                                <rect key="frame" x="0.0" y="322" width="414" height="540"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="xrA-Mx-4xy">
@@ -32,12 +37,12 @@
                                     <outlet property="delegate" destination="Adv-Kf-Ote" id="kSu-aw-EsF"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently Updates Heroes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-C8-NVS">
-                                <rect key="frame" x="20" y="282" width="374" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently Updated Heroes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-C8-NVS">
+                                <rect key="frame" x="20" y="282" width="374" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="uK4-S3-sN7"/>
+                                    <constraint firstAttribute="height" constant="30" id="uK4-S3-sN7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

@@ -11,6 +11,9 @@
 		5403AB1924A8930C00BDBC38 /* HeroListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5403AB1824A8930C00BDBC38 /* HeroListStoryboard.storyboard */; };
 		5403AB3F24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB3D24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift */; };
 		5403AB4024A8B4D700BDBC38 /* HeroListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5403AB3E24A8B4D700BDBC38 /* HeroListCollectionViewCell.xib */; };
+		5403AB4724AA18EC00BDBC38 /* AVENGEANCE HEROIC AVENGER BD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5403AB4624AA18EC00BDBC38 /* AVENGEANCE HEROIC AVENGER BD.ttf */; };
+		5403AB4A24AA26AB00BDBC38 /* FeaturedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB4824AA26AB00BDBC38 /* FeaturedCollectionViewCell.swift */; };
+		5403AB4B24AA26AB00BDBC38 /* FeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5403AB4924AA26AB00BDBC38 /* FeaturedCollectionViewCell.xib */; };
 		5408682A24A1530C004D47E2 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5408682924A1530C004D47E2 /* KingfisherSwiftUI */; };
 		54145DB2249ABCDD00B80943 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54145DB1249ABCDD00B80943 /* MockURLSession.swift */; };
 		54145DB5249ABFAC00B80943 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547A3DBA249AB7CC005AD507 /* HttpClient.swift */; };
@@ -67,6 +70,9 @@
 		5403AB1824A8930C00BDBC38 /* HeroListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroListStoryboard.storyboard; sourceTree = "<group>"; };
 		5403AB3D24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroListCollectionViewCell.swift; sourceTree = "<group>"; };
 		5403AB3E24A8B4D700BDBC38 /* HeroListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroListCollectionViewCell.xib; sourceTree = "<group>"; };
+		5403AB4624AA18EC00BDBC38 /* AVENGEANCE HEROIC AVENGER BD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AVENGEANCE HEROIC AVENGER BD.ttf"; sourceTree = "<group>"; };
+		5403AB4824AA26AB00BDBC38 /* FeaturedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCollectionViewCell.swift; sourceTree = "<group>"; };
+		5403AB4924AA26AB00BDBC38 /* FeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		54145DB1249ABCDD00B80943 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		54145DB6249B8C2A00B80943 /* WebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTest.swift; sourceTree = "<group>"; };
 		54145DBD249B92C400B80943 /* heroesResponseMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroesResponseMock.json; sourceTree = "<group>"; };
@@ -133,8 +139,18 @@
 			children = (
 				5403AB3D24A8B4D700BDBC38 /* HeroListCollectionViewCell.swift */,
 				5403AB3E24A8B4D700BDBC38 /* HeroListCollectionViewCell.xib */,
+				5403AB4824AA26AB00BDBC38 /* FeaturedCollectionViewCell.swift */,
+				5403AB4924AA26AB00BDBC38 /* FeaturedCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		5403AB4124AA170800BDBC38 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5403AB4624AA18EC00BDBC38 /* AVENGEANCE HEROIC AVENGER BD.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		54145DBF249B9AB800B80943 /* Mocks */ = {
@@ -264,6 +280,7 @@
 		54FCF9632497D403008157F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5403AB4124AA170800BDBC38 /* Fonts */,
 				543FD53124A274D100DD11C1 /* ActivityIndicator.swift */,
 				54FCF93B2497D2F0008157F2 /* LaunchScreen.storyboard */,
 				54FCF9362497D2F0008157F2 /* Assets.xcassets */,
@@ -400,6 +417,8 @@
 				54FCF93A2497D2F0008157F2 /* Preview Assets.xcassets in Resources */,
 				54FCF9372497D2F0008157F2 /* Assets.xcassets in Resources */,
 				5403AB1924A8930C00BDBC38 /* HeroListStoryboard.storyboard in Resources */,
+				5403AB4B24AA26AB00BDBC38 /* FeaturedCollectionViewCell.xib in Resources */,
+				5403AB4724AA18EC00BDBC38 /* AVENGEANCE HEROIC AVENGER BD.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +471,7 @@
 				545EA5D0249E84900069189C /* HeroDetailsViewModel.swift in Sources */,
 				5425907B2498103600C52113 /* WebService.swift in Sources */,
 				5425907F2498DFC500C52113 /* APIResponse.swift in Sources */,
+				5403AB4A24AA26AB00BDBC38 /* FeaturedCollectionViewCell.swift in Sources */,
 				54FCF9302497D2ED008157F2 /* SceneDelegate.swift in Sources */,
 				54FCF9352497D2ED008157F2 /* HeroListView.swift in Sources */,
 				54FCF9332497D2ED008157F2 /* MarvelHeroes.xcdatamodeld in Sources */,

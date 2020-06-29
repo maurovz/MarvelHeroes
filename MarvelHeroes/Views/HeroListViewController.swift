@@ -1,4 +1,5 @@
 import UIKit
+import Combine
 
 class HeroListViewController: UIViewController {
   @IBOutlet weak var featuredHeroesCollectionView: UICollectionView!
@@ -54,7 +55,11 @@ extension HeroListViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    if collectionView == heroListCollectionView {
+      return 10
+    } else {
+      return 5
+    }
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
