@@ -6,13 +6,28 @@ class HeroListViewController: UIViewController {
   @IBOutlet weak var heroListCollectionView: UICollectionView!
   private let screenSize = UIScreen.main.bounds
   @IBOutlet weak var featuredPageControl: UIPageControl!
-  let images = ["avatar", "comic"]
+  let images = ["comic"]
+  private var heroListViewModel = HeroListViewModel()
+  private var cancellables: Set<AnyCancellable> = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setupCollectionView()
     addNavigationBarLogo(image: UIImage(named: "logo"))
     setPageControlNumberOfPages(pages: images.count)
+    bindModel()
+  }
+
+  private func bindModel() {
+    heroListViewModel.$heroes
+      .receive(on: RunLoop.main)
+      .sink { (_) in
+        self.heroListCollectionView.reloadData()
+    }.store(in: &cancellables)
+  }
+
+  func loadHeroes() {
+    heroListViewModel.syncHeroes()
   }
 
   override func viewDidAppear(_ animated: Bool) {
@@ -98,16 +113,17 @@ extension HeroListViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
                       insetForSectionAt section: Int) -> UIEdgeInsets {
     if collectionView == featuredHeroesCollectionView {
-      return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+      let sidesMargin: CGFloat = 0
+      return UIEdgeInsets(top: sidesMargin, left: sidesMargin, bottom: sidesMargin, right: sidesMargin)
     } else {
-      let sideMargins: CGFloat = 10
-      return UIEdgeInsets(top: 0, left: sideMargins, bottom: 0, right: sideMargins)
+      let leftSideMargins: CGFloat = 10
+      return UIEdgeInsets(top: 0, left: leftSideMargins, bottom: 0, right: 0)
     }
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     if collectionView == heroListCollectionView {
-      return 10
+      return heroListViewModel.heroes.count
     } else {
       return images.count
     }
@@ -128,7 +144,8 @@ extension HeroListViewController: UICollectionViewDataSource {
         else {
           fatalError("Error dequeuing Reusable Cell")
       }
-      cell.configure(with: UIImage(named: "hero"))
+      let hero = self.heroListViewModel.heroes[indexPath.row]
+      cell.configure(imageUrl: hero.thumbnailImage, heroName: hero.name)
       return cell
     }
   }

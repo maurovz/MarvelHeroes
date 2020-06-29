@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 class HeroListCollectionViewCell: UICollectionViewCell {
   @IBOutlet var imageView: UIImageView!
@@ -22,7 +23,8 @@ class HeroListCollectionViewCell: UICollectionViewCell {
     blurrView.sendSubviewToBack(blurredView)
   }
 
-  public func configure(with image: UIImage?) {
-    imageView.image = image
+  public func configure(imageUrl: String, heroName: String) {
+    imageView.kf.setImage(with: URL(string: imageUrl))
+    titleLabel.text = heroName
   }
 }
