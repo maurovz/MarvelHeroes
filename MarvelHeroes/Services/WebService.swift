@@ -12,9 +12,7 @@ class WebService {
     case decodingError = "Error decoding response"
   }
 
-  typealias ResponseCompleteClosure = ([Hero]?, APIError?) -> Void
-
-  func getHeroes(completion: @escaping ResponseCompleteClosure) {
+  func getHeroes(completion: @escaping ([Hero]?, APIError?) -> Void) {
     guard let url = URL(string: Constants.apiURL + Constants.heroesEndpoint) else {
       fatalError(Constants.urlError)
     }
@@ -26,7 +24,7 @@ class WebService {
         return
       }
       do {
-        let heroes = try JSONDecoder().decode(APIResponse.self, from: data)
+        let heroes = try JSONDecoder().decode(HeroAPIResponse.self, from: data)
         DispatchQueue.main.async {
           completion(heroes.data.results, nil)
         }
@@ -35,9 +33,9 @@ class WebService {
       }
     }
   }
-  
-  func getComics(completion: @escaping ResponseCompleteClosure) {
-    guard let url = URL(string: Constants.apiURL + Constants.heroesEndpoint) else {
+
+  func getComics(completion: @escaping ([Comic]?, APIError?) -> Void) {
+    guard let url = URL(string: Constants.apiURL + Constants.comicsEndpoint) else {
       fatalError(Constants.urlError)
     }
     httpClient.get(url: url) { data, error in
@@ -48,9 +46,9 @@ class WebService {
         return
       }
       do {
-        let heroes = try JSONDecoder().decode(APIResponse.self, from: data)
+        let comics = try JSONDecoder().decode(ComicAPIResponse.self, from: data)
         DispatchQueue.main.async {
-          completion(heroes.data.results, nil)
+          completion(comics.data.results, nil)
         }
       } catch {
         completion(nil, .decodingError)

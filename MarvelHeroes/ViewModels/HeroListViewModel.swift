@@ -13,10 +13,8 @@ class HeroListViewModel: ObservableObject {
   }
 
   private func syncHeroes() {
-    isLoadingHeroes = true
-    webService.getHeroes { heroes, errors in
-      self.isLoadingHeroes = false
-      if errors == .noNetwork {
+    webService.getHeroes { heroes, error in
+      if error == .noNetwork {
         self.heroes = self.fetchHeroesFromCoreData(heroService: HeroService())
       } else {
         guard let heroes = heroes else { return }
@@ -27,9 +25,16 @@ class HeroListViewModel: ObservableObject {
       }
     }
   }
-  
+
   private func syncComics() {
-    
+    webService.getComics { comics, error in
+      if error == .noNetwork {
+        // fetch from core data
+      } else {
+        guard let comics = comics else { return }
+
+      }
+    }
   }
 
   private func saveHeroesToCoreData(heroService: HeroService, heroes: [Hero]) {
@@ -42,6 +47,6 @@ class HeroListViewModel: ObservableObject {
   }
 
   private func deleteOldHeroesFromCoreData(heroService: HeroService) -> Bool {
-    return heroService.deleteOldHeroesFromCoreData()
+    return heroService.deleteEntityFromCoreData(entity: "HeroDetails")
   }
 }

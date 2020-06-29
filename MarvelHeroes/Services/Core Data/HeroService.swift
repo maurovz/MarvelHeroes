@@ -22,10 +22,10 @@ struct HeroService {
     }
   }
 
-  func deleteOldHeroesFromCoreData() -> Bool {
+  func deleteEntityFromCoreData(entity: String) -> Bool {
     let context = CoreDataStack.persistentContainer.viewContext
     do {
-      let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "HeroDetails")
+      let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
       let request = NSBatchDeleteRequest(fetchRequest: fetch)
       try context.execute(request)
       return true
