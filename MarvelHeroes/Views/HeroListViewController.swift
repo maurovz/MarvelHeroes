@@ -59,7 +59,7 @@ extension HeroListViewController: UICollectionViewDelegateFlowLayout {
     setupLayouts()
     registerCollectionViewCellsNibs()
   }
-  
+
   private func setupLayouts() {
     let layout = UICollectionViewFlowLayout()
     layout.minimumInteritemSpacing = 5
