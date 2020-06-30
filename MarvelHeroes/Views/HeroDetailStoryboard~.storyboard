@@ -91,12 +91,28 @@
                         <outlet property="featuredHeroesCollectionView" destination="kLz-pT-1ME" id="Dik-bq-WJH"/>
                         <outlet property="featuredPageControl" destination="nBe-In-nPt" id="1O5-cL-fbx"/>
                         <outlet property="heroListCollectionView" destination="zpg-l8-JWt" id="n2k-XB-8pF"/>
-                        <segue destination="OKS-X5-6IB" kind="show" identifier="HeroDetailSegue" id="SQd-RD-2oL"/>
+                        <segue destination="qyh-kG-gJH" kind="show" identifier="HeroDetailSegue" id="SQd-RD-2oL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biC-sc-mFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="141" y="-38"/>
+        </scene>
+        <!--Hero Detail View Controller-->
+        <scene sceneID="Sef-G4-dcx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pE5-Kf-1lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="qyh-kG-gJH" customClass="HeroDetailViewController" customModule="MarvelHeroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvf-tN-aRO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kgJ-Nu-ojc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cCi-Ve-98y"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="899" y="-36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jMP-di-0FR">
@@ -115,16 +131,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJ5-U3-d6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-842.02898550724649" y="-37.5"/>
-        </scene>
-        <!--HeroDetailStoryboard-->
-        <scene sceneID="gm3-uF-apN">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HeroDetailStoryboard" id="OKS-X5-6IB" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9fb-e6-owY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HMS-cJ-CYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="899" y="-36"/>
         </scene>
     </scenes>
 </document>

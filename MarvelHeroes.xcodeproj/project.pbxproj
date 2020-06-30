@@ -39,6 +39,8 @@
 		54C4761424AB98BA000C74C5 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB4E24AA892300BDBC38 /* Thumbnail.swift */; };
 		54C4761524AB98BD000C74C5 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB4C24AA876400BDBC38 /* Comic.swift */; };
 		54C4761624AB98C1000C74C5 /* ComicApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B5EBF824AA8AC8007EE7C5 /* ComicApiResponse.swift */; };
+		54C4761824AB9EDB000C74C5 /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4761724AB9EDB000C74C5 /* HeroDetailViewController.swift */; };
+		54C4761A24AB9EFD000C74C5 /* HeroDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C4761924AB9EFD000C74C5 /* HeroDetailStoryboard.storyboard */; };
 		54FCF92E2497D2ED008157F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92D2497D2ED008157F2 /* AppDelegate.swift */; };
 		54FCF9302497D2ED008157F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92F2497D2ED008157F2 /* SceneDelegate.swift */; };
 		54FCF9332497D2ED008157F2 /* MarvelHeroes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */; };
@@ -93,6 +95,8 @@
 		547A3DBA249AB7CC005AD507 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		54B5EBF824AA8AC8007EE7C5 /* ComicApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicApiResponse.swift; sourceTree = "<group>"; };
 		54C4761224AA96B2000C74C5 /* ComicDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailsViewModel.swift; sourceTree = "<group>"; };
+		54C4761724AB9EDB000C74C5 /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		54C4761924AB9EFD000C74C5 /* HeroDetailStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HeroDetailStoryboard.storyboard; sourceTree = "<group>"; };
 		54FCF92A2497D2ED008157F2 /* MarvelHeroes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHeroes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FCF92D2497D2ED008157F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54FCF92F2497D2ED008157F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 				5403AB1A24A8969800BDBC38 /* Cells */,
 				5403AB1624A892FB00BDBC38 /* HeroListViewController.swift */,
 				5403AB1824A8930C00BDBC38 /* HeroListStoryboard.storyboard */,
+				54C4761924AB9EFD000C74C5 /* HeroDetailStoryboard.storyboard */,
+				54C4761724AB9EDB000C74C5 /* HeroDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				54FCF93A2497D2F0008157F2 /* Preview Assets.xcassets in Resources */,
 				54FCF9372497D2F0008157F2 /* Assets.xcassets in Resources */,
 				5403AB1924A8930C00BDBC38 /* HeroListStoryboard.storyboard in Resources */,
+				54C4761A24AB9EFD000C74C5 /* HeroDetailStoryboard.storyboard in Resources */,
 				5403AB4B24AA26AB00BDBC38 /* FeaturedCollectionViewCell.xib in Resources */,
 				5403AB4724AA18EC00BDBC38 /* AVENGEANCE HEROIC AVENGER BD.ttf in Resources */,
 			);
@@ -469,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FCF92E2497D2ED008157F2 /* AppDelegate.swift in Sources */,
+				54C4761824AB9EDB000C74C5 /* HeroDetailViewController.swift in Sources */,
 				54145DC6249E27CF00B80943 /* CoreDataStack.swift in Sources */,
 				54C4761324AA96B2000C74C5 /* ComicDetailsViewModel.swift in Sources */,
 				545EA5D0249E84900069189C /* HeroDetailsViewModel.swift in Sources */,
