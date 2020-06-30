@@ -39,6 +39,9 @@
 		54AA900424A10A7200D0EB51 /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA900324A10A7200D0EB51 /* HeroCellView.swift */; };
 		54B5EBF924AA8AC8007EE7C5 /* ComicApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B5EBF824AA8AC8007EE7C5 /* ComicApiResponse.swift */; };
 		54C4761324AA96B2000C74C5 /* ComicDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C4761224AA96B2000C74C5 /* ComicDetailsViewModel.swift */; };
+		54C4761424AB98BA000C74C5 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB4E24AA892300BDBC38 /* Thumbnail.swift */; };
+		54C4761524AB98BD000C74C5 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403AB4C24AA876400BDBC38 /* Comic.swift */; };
+		54C4761624AB98C1000C74C5 /* ComicApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B5EBF824AA8AC8007EE7C5 /* ComicApiResponse.swift */; };
 		54FCF92E2497D2ED008157F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92D2497D2ED008157F2 /* AppDelegate.swift */; };
 		54FCF9302497D2ED008157F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF92F2497D2ED008157F2 /* SceneDelegate.swift */; };
 		54FCF9332497D2ED008157F2 /* MarvelHeroes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54FCF9312497D2ED008157F2 /* MarvelHeroes.xcdatamodeld */; };
@@ -508,13 +511,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				54145DB2249ABCDD00B80943 /* MockURLSession.swift in Sources */,
+				54C4761624AB98C1000C74C5 /* ComicApiResponse.swift in Sources */,
 				54145DB5249ABFAC00B80943 /* HttpClient.swift in Sources */,
 				54145DB7249B8C2A00B80943 /* WebServiceTest.swift in Sources */,
 				54145DB8249B8CB800B80943 /* WebService.swift in Sources */,
 				54145DC1249B9AEC00B80943 /* HeroesResponseMock.swift in Sources */,
 				54145DBA249B8F6900B80943 /* Constants.swift in Sources */,
 				54145DBC249B8F9200B80943 /* HeroAPIResponse.swift in Sources */,
+				54C4761524AB98BD000C74C5 /* Comic.swift in Sources */,
 				54FCF9482497D2F0008157F2 /* HTTPClientTests.swift in Sources */,
+				54C4761424AB98BA000C74C5 /* Thumbnail.swift in Sources */,
 				54145DB9249B8F5300B80943 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
