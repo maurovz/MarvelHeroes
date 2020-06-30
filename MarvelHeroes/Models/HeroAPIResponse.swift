@@ -1,6 +1,6 @@
 import Foundation
 
-struct APIResponse: Decodable {
+struct HeroAPIResponse: Decodable {
   let code: Int
   let status: String
   let data: HeroData
