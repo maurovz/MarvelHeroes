@@ -8,6 +8,7 @@ class HeroListViewController: UIViewController {
   private let screenSize = UIScreen.main.bounds
   private let heroListViewModel = HeroListViewModel()
   private var cancellables: Set<AnyCancellable> = []
+  private var selectedHeroIndex = Int()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,6 +20,15 @@ class HeroListViewController: UIViewController {
 
   override func viewDidAppear(_ animated: Bool) {
     setCurrentPageControlPage(page: 0)
+  }
+
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "segueShowNavigation" {
+      if let destVC = segue.destination as? UINavigationController,
+        let targetController = destVC.topViewController as? HeroDetailViewController {
+        targetController.heroDetailsViewModel = heroListViewModel.heroes[selectedHeroIndex]
+      }
+    }
   }
 
   private func bindHeroListViewModel() {
@@ -154,5 +164,10 @@ extension HeroListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView,
                       willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     setCurrentPageControlPage(page: indexPath.row)
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "HeroDetailSegue", sender: self)
+    selectedHeroIndex = indexPath.row
   }
 }

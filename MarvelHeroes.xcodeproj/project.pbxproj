@@ -258,9 +258,9 @@
 			children = (
 				5403AB1A24A8969800BDBC38 /* Cells */,
 				5403AB1624A892FB00BDBC38 /* HeroListViewController.swift */,
+				54C4761724AB9EDB000C74C5 /* HeroDetailViewController.swift */,
 				5403AB1824A8930C00BDBC38 /* HeroListStoryboard.storyboard */,
 				54C4761924AB9EFD000C74C5 /* HeroDetailStoryboard.storyboard */,
-				54C4761724AB9EDB000C74C5 /* HeroDetailViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

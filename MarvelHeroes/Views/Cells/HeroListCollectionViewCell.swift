@@ -11,6 +11,10 @@ class HeroListCollectionViewCell: UICollectionViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     createBlurrView()
+    roundCorners()
+  }
+  
+  private func roundCorners() {
     self.layer.cornerRadius = 10
     self.layer.masksToBounds = true
   }
