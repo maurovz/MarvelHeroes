@@ -6,9 +6,15 @@ class FeaturedCollectionViewCell: UICollectionViewCell {
 
   override func awakeFromNib() {
     super.awakeFromNib()
+    createBlurrView()
   }
 
-  public func configure(with image: UIImage?) {
-    imageView.image = image
+  public func configure(imageUrl: String) {
+    imageView.kf.indicatorType = .activity
+    imageView.kf.setImage(with: URL(string: imageUrl))
+  }
+
+  private func createBlurrView() {
+
   }
 }

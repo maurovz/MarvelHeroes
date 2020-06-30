@@ -17,14 +17,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comic" translatesAutoresizingMaskIntoConstraints="NO" id="1Kk-Ve-Eup">
-                        <rect key="frame" x="0.0" y="0.0" width="349" height="123"/>
+                        <rect key="frame" x="0.0" y="0.0" width="349" height="423"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="1Kk-Ve-Eup" secondAttribute="trailing" id="8Ix-iT-NeW"/>
                 <constraint firstItem="1Kk-Ve-Eup" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Hbt-fe-C48"/>
-                <constraint firstAttribute="bottom" secondItem="1Kk-Ve-Eup" secondAttribute="bottom" id="eiF-ET-N2T"/>
+                <constraint firstAttribute="bottom" secondItem="1Kk-Ve-Eup" secondAttribute="bottom" constant="-300" id="eiF-ET-N2T"/>
                 <constraint firstItem="1Kk-Ve-Eup" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rFH-Wd-NeA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

@@ -6,7 +6,6 @@ class HeroListViewController: UIViewController {
   @IBOutlet weak var heroListCollectionView: UICollectionView!
   @IBOutlet weak var featuredPageControl: UIPageControl!
   private let screenSize = UIScreen.main.bounds
-  let images = ["comic"]
   private let heroListViewModel = HeroListViewModel()
   private var cancellables: Set<AnyCancellable> = []
 
@@ -24,13 +23,17 @@ class HeroListViewController: UIViewController {
 
   private func bindHeroListViewModel() {
     heroListViewModel.$heroes.sink { _ in
-        self.heroListCollectionView.reloadData()
+      self.heroListCollectionView.reloadData()
+    }.store(in: &cancellables)
+    heroListViewModel.$comics.sink { _ in
+      self.featuredHeroesCollectionView.reloadData()
+      self.setupPageControl()
     }.store(in: &cancellables)
   }
 
   private func setupPageControl() {
-    let numberOfPages = images.count
-    featuredPageControl.numberOfPages = numberOfPages
+    featuredPageControl.numberOfPages = heroListViewModel.comics.count
+    setCurrentPageControlPage(page: heroListViewModel.comics.count)
   }
 
   private func setCurrentPageControlPage(page: Int) {
@@ -56,7 +59,7 @@ extension HeroListViewController: UICollectionViewDelegateFlowLayout {
     setupLayouts()
     registerCollectionViewCellsNibs()
   }
-
+  
   private func setupLayouts() {
     let layout = UICollectionViewFlowLayout()
     layout.minimumInteritemSpacing = 5
@@ -71,11 +74,11 @@ extension HeroListViewController: UICollectionViewDelegateFlowLayout {
 
   private func registerCollectionViewCellsNibs() {
     heroListCollectionView.register(
-    UINib(nibName: HeroListCollectionViewCell.identifier, bundle: .main),
-    forCellWithReuseIdentifier: HeroListCollectionViewCell.identifier)
+      UINib(nibName: HeroListCollectionViewCell.identifier, bundle: .main),
+      forCellWithReuseIdentifier: HeroListCollectionViewCell.identifier)
     featuredHeroesCollectionView.register(
-    UINib(nibName: FeaturedCollectionViewCell.identifier, bundle: .main),
-    forCellWithReuseIdentifier: FeaturedCollectionViewCell.identifier)
+      UINib(nibName: FeaturedCollectionViewCell.identifier, bundle: .main),
+      forCellWithReuseIdentifier: FeaturedCollectionViewCell.identifier)
   }
 
   func collectionView(_ collectionView: UICollectionView,
@@ -120,7 +123,7 @@ extension HeroListViewController: UICollectionViewDataSource {
     if collectionView == heroListCollectionView {
       return heroListViewModel.heroes.count
     } else {
-      return images.count
+      return heroListViewModel.comics.count
     }
   }
 
@@ -131,7 +134,8 @@ extension HeroListViewController: UICollectionViewDataSource {
         else {
           fatalError("Error dequeuing Reusable Cell")
       }
-      cell.configure(with: UIImage(named: images[indexPath.row]))
+      let comics = heroListViewModel.comics
+      cell.configure(imageUrl: comics[indexPath.row].thumbnailImage)
       return cell
     } else {
       guard let cell = collectionView.dequeueReusableCell(

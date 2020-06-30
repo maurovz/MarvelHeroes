@@ -24,6 +24,7 @@ class HeroListCollectionViewCell: UICollectionViewCell {
   }
 
   public func configure(imageUrl: String, heroName: String) {
+    imageView.kf.indicatorType = .activity
     imageView.kf.setImage(with: URL(string: imageUrl))
     titleLabel.text = heroName
   }
