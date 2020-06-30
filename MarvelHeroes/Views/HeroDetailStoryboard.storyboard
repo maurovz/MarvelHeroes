@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,31 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGA-h9-wGc">
                                                         <rect key="frame" x="30" y="10" width="165.5" height="108"/>
-                                                        <color key="backgroundColor" red="0.41551366449999999" green="0.80125653740000002" blue="0.79488456249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq2-Js-zFC">
+                                                                <rect key="frame" x="15" y="15" width="150.5" height="27"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z67-bM-fha">
+                                                                <rect key="frame" x="0.0" y="42" width="165.5" height="48.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="heroBackground1"/>
+                                                        <constraints>
+                                                            <constraint firstItem="z67-bM-fha" firstAttribute="height" secondItem="XGA-h9-wGc" secondAttribute="height" multiplier="0.45" id="FyQ-DR-Rq5"/>
+                                                            <constraint firstItem="wq2-Js-zFC" firstAttribute="height" secondItem="XGA-h9-wGc" secondAttribute="height" multiplier="0.25" id="Kyd-Z9-gi6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="z67-bM-fha" secondAttribute="trailing" id="Ps4-5A-DYH"/>
+                                                            <constraint firstItem="wq2-Js-zFC" firstAttribute="leading" secondItem="XGA-h9-wGc" secondAttribute="leading" constant="15" id="lDG-Db-fAm"/>
+                                                            <constraint firstItem="wq2-Js-zFC" firstAttribute="top" secondItem="XGA-h9-wGc" secondAttribute="top" constant="15" id="qIV-Wk-Nm4"/>
+                                                            <constraint firstItem="z67-bM-fha" firstAttribute="top" secondItem="wq2-Js-zFC" secondAttribute="bottom" id="v08-B6-Tai"/>
+                                                            <constraint firstAttribute="trailing" secondItem="wq2-Js-zFC" secondAttribute="trailing" id="xjI-0q-DvL"/>
+                                                            <constraint firstItem="z67-bM-fha" firstAttribute="leading" secondItem="XGA-h9-wGc" secondAttribute="leading" id="y4E-Jj-pAX"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -44,7 +69,29 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-cn-3QI">
                                                         <rect key="frame" x="30" y="128" width="165.5" height="108.5"/>
-                                                        <color key="backgroundColor" red="0.41551366449999999" green="0.80125653740000002" blue="0.79488456249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-B4-mkZ">
+                                                                <rect key="frame" x="15" y="15" width="150.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-QL-QTT">
+                                                                <rect key="frame" x="0.0" y="42.5" width="165.5" height="48.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="heroBackground3"/>
+                                                        <constraints>
+                                                            <constraint firstItem="JO3-QL-QTT" firstAttribute="leading" secondItem="2r4-cn-3QI" secondAttribute="leading" id="DKI-lt-9V3"/>
+                                                            <constraint firstItem="cpK-B4-mkZ" firstAttribute="leading" secondItem="2r4-cn-3QI" secondAttribute="leading" constant="15" id="HVw-xO-nde"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JO3-QL-QTT" secondAttribute="trailing" id="VFQ-Lj-INk"/>
+                                                            <constraint firstItem="JO3-QL-QTT" firstAttribute="top" secondItem="cpK-B4-mkZ" secondAttribute="bottom" id="g1c-7t-LTy"/>
+                                                            <constraint firstAttribute="trailing" secondItem="cpK-B4-mkZ" secondAttribute="trailing" id="lPq-6i-WGT"/>
+                                                            <constraint firstItem="cpK-B4-mkZ" firstAttribute="top" secondItem="2r4-cn-3QI" secondAttribute="top" constant="15" id="pBi-Fl-WFc"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -54,7 +101,29 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-89-cIo">
                                                         <rect key="frame" x="218.5" y="128" width="165.5" height="108.5"/>
-                                                        <color key="backgroundColor" red="0.41551366449999999" green="0.80125653740000002" blue="0.79488456249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d35-qL-Gf1">
+                                                                <rect key="frame" x="0.0" y="42.5" width="165.5" height="48.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-uW-9EG">
+                                                                <rect key="frame" x="15" y="15" width="150.5" height="27.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="heroBackground4"/>
+                                                        <constraints>
+                                                            <constraint firstItem="pMH-uW-9EG" firstAttribute="top" secondItem="NHD-89-cIo" secondAttribute="top" constant="15" id="0zl-NY-s0g"/>
+                                                            <constraint firstItem="d35-qL-Gf1" firstAttribute="leading" secondItem="NHD-89-cIo" secondAttribute="leading" id="1ry-Od-joQ"/>
+                                                            <constraint firstItem="d35-qL-Gf1" firstAttribute="top" secondItem="pMH-uW-9EG" secondAttribute="bottom" id="6RT-2Y-cCo"/>
+                                                            <constraint firstAttribute="trailing" secondItem="d35-qL-Gf1" secondAttribute="trailing" id="PF0-nI-wQs"/>
+                                                            <constraint firstAttribute="trailing" secondItem="pMH-uW-9EG" secondAttribute="trailing" id="adk-lE-dYg"/>
+                                                            <constraint firstItem="pMH-uW-9EG" firstAttribute="leading" secondItem="NHD-89-cIo" secondAttribute="leading" constant="15" id="i6Z-ww-tr9"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -64,7 +133,28 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEp-Ob-7ad">
                                                         <rect key="frame" x="218.5" y="10" width="165.5" height="108"/>
-                                                        <color key="backgroundColor" red="0.41551366449999999" green="0.80125653740000002" blue="0.79488456249999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07D-kk-frs">
+                                                                <rect key="frame" x="15" y="15" width="143" height="29"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z44-c2-DdM">
+                                                                <rect key="frame" x="0.0" y="44" width="165.5" height="42"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="31"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="heroBackground2"/>
+                                                        <constraints>
+                                                            <constraint firstItem="07D-kk-frs" firstAttribute="leading" secondItem="YEp-Ob-7ad" secondAttribute="leading" constant="15" id="UjF-Ft-Nb4"/>
+                                                            <constraint firstItem="z44-c2-DdM" firstAttribute="leading" secondItem="YEp-Ob-7ad" secondAttribute="leading" id="o0B-aR-qlj"/>
+                                                            <constraint firstItem="07D-kk-frs" firstAttribute="top" secondItem="YEp-Ob-7ad" secondAttribute="top" constant="15" id="rHI-JX-vEK"/>
+                                                            <constraint firstItem="z44-c2-DdM" firstAttribute="top" secondItem="07D-kk-frs" secondAttribute="bottom" id="tsF-fG-n2U"/>
+                                                            <constraint firstAttribute="trailing" secondItem="z44-c2-DdM" secondAttribute="trailing" id="xDC-Yd-Y9P"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="10"/>
@@ -75,10 +165,14 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="07D-kk-frs" firstAttribute="height" secondItem="wq2-Js-zFC" secondAttribute="height" multiplier="1.07407" id="41q-Xs-aLO"/>
                                                     <constraint firstItem="2r4-cn-3QI" firstAttribute="width" secondItem="XGA-h9-wGc" secondAttribute="width" id="6k8-BZ-gtT"/>
                                                     <constraint firstItem="NHD-89-cIo" firstAttribute="top" secondItem="YEp-Ob-7ad" secondAttribute="bottom" constant="10" id="9WX-Jb-kuP"/>
+                                                    <constraint firstItem="07D-kk-frs" firstAttribute="width" secondItem="wq2-Js-zFC" secondAttribute="width" multiplier="0.950166" id="Atn-kJ-fDB"/>
+                                                    <constraint firstItem="pMH-uW-9EG" firstAttribute="height" secondItem="cpK-B4-mkZ" secondAttribute="height" id="G4I-Za-nny"/>
                                                     <constraint firstItem="NHD-89-cIo" firstAttribute="height" secondItem="XGA-h9-wGc" secondAttribute="height" id="IaQ-o0-fgJ"/>
                                                     <constraint firstItem="2r4-cn-3QI" firstAttribute="leading" secondItem="hCR-90-jKw" secondAttribute="leading" constant="30" id="JOf-ox-alJ"/>
+                                                    <constraint firstItem="z44-c2-DdM" firstAttribute="height" secondItem="z67-bM-fha" secondAttribute="height" multiplier="0.865979" id="PFd-Dp-aQM"/>
                                                     <constraint firstItem="XGA-h9-wGc" firstAttribute="width" secondItem="hCR-90-jKw" secondAttribute="width" multiplier="0.4" id="Qds-R9-OoN"/>
                                                     <constraint firstAttribute="trailing" secondItem="NHD-89-cIo" secondAttribute="trailing" constant="30" id="TLK-6E-S0z"/>
                                                     <constraint firstItem="YEp-Ob-7ad" firstAttribute="width" secondItem="XGA-h9-wGc" secondAttribute="width" id="TRm-D0-Ssl"/>
@@ -88,15 +182,18 @@
                                                     <constraint firstItem="XGA-h9-wGc" firstAttribute="top" secondItem="hCR-90-jKw" secondAttribute="top" constant="10" id="amU-2N-vZr"/>
                                                     <constraint firstItem="XGA-h9-wGc" firstAttribute="leading" secondItem="hCR-90-jKw" secondAttribute="leading" constant="30" id="beR-jy-ggU"/>
                                                     <constraint firstItem="NHD-89-cIo" firstAttribute="width" secondItem="XGA-h9-wGc" secondAttribute="width" id="br6-qc-Y29"/>
+                                                    <constraint firstItem="JO3-QL-QTT" firstAttribute="height" secondItem="z67-bM-fha" secondAttribute="height" id="cPY-l9-HPC"/>
+                                                    <constraint firstItem="cpK-B4-mkZ" firstAttribute="height" secondItem="wq2-Js-zFC" secondAttribute="height" id="d3H-tP-6qw"/>
                                                     <constraint firstItem="XGA-h9-wGc" firstAttribute="height" secondItem="hCR-90-jKw" secondAttribute="height" multiplier="0.35" id="dfb-NG-ywx"/>
+                                                    <constraint firstItem="d35-qL-Gf1" firstAttribute="height" secondItem="z67-bM-fha" secondAttribute="height" id="hVA-w0-ObK"/>
                                                     <constraint firstItem="2r4-cn-3QI" firstAttribute="top" secondItem="XGA-h9-wGc" secondAttribute="bottom" constant="10" id="hj8-uG-ujE"/>
                                                     <constraint firstAttribute="trailing" secondItem="YEp-Ob-7ad" secondAttribute="trailing" constant="30" id="rQa-Ep-Kel"/>
                                                     <constraint firstItem="YEp-Ob-7ad" firstAttribute="leading" secondItem="XGA-h9-wGc" secondAttribute="trailing" priority="750" constant="36" id="sfe-bU-Xs2"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero's Career Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-E4-qsQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero's Career Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-E4-qsQ">
                                                 <rect key="frame" x="20" y="163.5" width="374" height="38"/>
-                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -159,6 +256,12 @@
                         <viewLayoutGuide key="safeArea" id="kgJ-Nu-ojc"/>
                     </view>
                     <navigationItem key="navigationItem" id="cCi-Ve-98y"/>
+                    <connections>
+                        <outlet property="comicCountLabel" destination="z67-bM-fha" id="wk5-Jg-1y2"/>
+                        <outlet property="heroCoverImageView" destination="YD3-qO-hrE" id="NZH-hh-mZP"/>
+                        <outlet property="heroDescriptionTextView" destination="WL0-ky-RXk" id="awO-SC-pnf"/>
+                        <outlet property="seriesCountLabel" destination="z44-c2-DdM" id="Z28-YU-ZJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pE5-Kf-1lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,5 +270,17 @@
     </scenes>
     <resources>
         <image name="hero" width="850" height="850"/>
+        <namedColor name="heroBackground1">
+            <color red="0.80057471989999995" green="0.25902161000000001" blue="0.141017437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="heroBackground2">
+            <color red="0.95277851820000004" green="0.83346343040000004" blue="0.01497956552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="heroBackground3">
+            <color red="0.64620310069999998" green="0.1842677593" blue="0.1235412136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="heroBackground4">
+            <color red="0.15747186539999999" green="0.42026615140000001" blue="0.59903597829999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

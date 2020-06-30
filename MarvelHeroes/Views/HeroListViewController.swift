@@ -23,10 +23,9 @@ class HeroListViewController: UIViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "segueShowNavigation" {
-      if let destVC = segue.destination as? UINavigationController,
-        let targetController = destVC.topViewController as? HeroDetailViewController {
-        targetController.heroDetailsViewModel = heroListViewModel.heroes[selectedHeroIndex]
+    if segue.identifier == "HeroDetailSegue" {
+      if let heroDetailViewController = segue.destination as? HeroDetailViewController {
+        heroDetailViewController.setupHeroViewModel(heroDetailsViewModel: heroListViewModel.heroes[selectedHeroIndex])
       }
     }
   }
