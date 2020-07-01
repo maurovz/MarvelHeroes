@@ -1,5 +1,5 @@
 ## MarvelAPIMVVM
-This project is a basic demonstration of the MVVM architecture in iOS. It demonstrates the usage of SwiftUI with Combine, as well as Unit Testing. 
+This project is a basic demonstration of the MVVM architecture in iOS. It demonstrates the usage of UIKit with Combine, as well as Unit Testing. 
 The app consists of a list of the newest Marvel heroes, with it's own detail view with additional information.
 
 ## Build status
