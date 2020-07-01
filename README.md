@@ -1,5 +1,5 @@
 ## MarvelAPIMVVM
-This project is a basic demonstration of the MVVM architecture in iOS. It demonstrates the usage of SwiftUI with Combine, as well as Unit Testing. 
+This project is a basic demonstration of the MVVM architecture in iOS. It demonstrates the usage of UIKit with Combine, as well as Unit Testing. 
 The app consists of a list of the newest Marvel heroes, with it's own detail view with additional information.
 
 ## Build status
@@ -8,12 +8,11 @@ Build status of continus integration with Travis
 [![Build Status](https://travis-ci.com/maurovz/MarvelHeroes.svg?branch=develop)](https://travis-ci.com/maurovz/MarvelHeroes)
  
 ## Screenshots
-![](https://i.imgur.com/U2Pded7.png)
-![](https://i.imgur.com/PV4qNhF.png)
+![](https://i.imgur.com/g5A73I2.png)
 
 ## Features
 MVVM Architecture
-SwiftUI & Combine usage
+UIKit & Combine usage
 Minimal third-party frameworks. Working on replacing the only framework (Kingfisher) with a custom framework.
 Unit Testing
 
