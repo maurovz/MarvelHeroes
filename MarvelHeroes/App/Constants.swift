@@ -11,4 +11,5 @@ struct Constants {
   static let heroBackground = "heroBackground1"
   static let orderByLatestParameter = "&orderBy=-modified"
   static let comicFormat = "&format=comic&startYear=2018&offset=101&limit=5"
+  static let logoImage = "logo"
 }

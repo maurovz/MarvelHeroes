@@ -13,7 +13,7 @@ class HeroListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupCollectionView()
-    addNavigationBarLogo(image: UIImage(named: "logo"))
+    addNavigationBarLogo(image: UIImage(named: Constants.logoImage))
     setupPageControl()
     bindHeroListViewModel()
   }
@@ -23,9 +23,10 @@ class HeroListViewController: UIViewController {
   }
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "HeroDetailSegue" {
+    let heroDetailViewSegueIdentifier = "HeroDetailSegue"
+    if segue.identifier == heroDetailViewSegueIdentifier {
       if let heroDetailViewController = segue.destination as? HeroDetailViewController {
-        heroDetailViewController.setupHeroViewModel(heroDetailsViewModel: heroListViewModel.heroes[selectedHeroIndex])
+        heroDetailViewController.heroDetailsViewModel = heroListViewModel.heroes[selectedHeroIndex]
       }
     }
   }
@@ -166,7 +167,7 @@ extension HeroListViewController: UICollectionViewDelegate {
   }
 
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "HeroDetailSegue", sender: self)
     selectedHeroIndex = indexPath.row
+    performSegue(withIdentifier: "HeroDetailSegue", sender: self)
   }
 }
