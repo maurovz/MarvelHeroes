@@ -43,20 +43,20 @@
                                         <rect key="frame" x="0.0" y="341" width="414" height="511"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCR-90-jKw" userLabel="Career Overview View">
-                                                <rect key="frame" x="0.0" y="252.5" width="414" height="258.5"/>
+                                                <rect key="frame" x="0.0" y="260.5" width="414" height="250.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGA-h9-wGc">
-                                                        <rect key="frame" x="30" y="10" width="165.5" height="90.5"/>
+                                                        <rect key="frame" x="30" y="10" width="165.5" height="87.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq2-Js-zFC">
-                                                                <rect key="frame" x="15" y="15" width="150.5" height="22.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq2-Js-zFC">
+                                                                <rect key="frame" x="15" y="5" width="150.5" height="30.5"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z67-bM-fha">
-                                                                <rect key="frame" x="0.0" y="37.5" width="165.5" height="41"/>
-                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="z67-bM-fha">
+                                                                <rect key="frame" x="0.0" y="35.5" width="165.5" height="39.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="28"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -64,10 +64,10 @@
                                                         <color key="backgroundColor" name="heroBackground1"/>
                                                         <constraints>
                                                             <constraint firstItem="z67-bM-fha" firstAttribute="height" secondItem="XGA-h9-wGc" secondAttribute="height" multiplier="0.45" id="FyQ-DR-Rq5"/>
-                                                            <constraint firstItem="wq2-Js-zFC" firstAttribute="height" secondItem="XGA-h9-wGc" secondAttribute="height" multiplier="0.25" id="Kyd-Z9-gi6"/>
+                                                            <constraint firstItem="wq2-Js-zFC" firstAttribute="height" secondItem="XGA-h9-wGc" secondAttribute="height" multiplier="0.35" id="Kyd-Z9-gi6"/>
                                                             <constraint firstAttribute="trailing" secondItem="z67-bM-fha" secondAttribute="trailing" id="Ps4-5A-DYH"/>
                                                             <constraint firstItem="wq2-Js-zFC" firstAttribute="leading" secondItem="XGA-h9-wGc" secondAttribute="leading" constant="15" id="lDG-Db-fAm"/>
-                                                            <constraint firstItem="wq2-Js-zFC" firstAttribute="top" secondItem="XGA-h9-wGc" secondAttribute="top" constant="15" id="qIV-Wk-Nm4"/>
+                                                            <constraint firstItem="wq2-Js-zFC" firstAttribute="top" secondItem="XGA-h9-wGc" secondAttribute="top" constant="5" id="qIV-Wk-Nm4"/>
                                                             <constraint firstItem="z67-bM-fha" firstAttribute="top" secondItem="wq2-Js-zFC" secondAttribute="bottom" id="v08-B6-Tai"/>
                                                             <constraint firstAttribute="trailing" secondItem="wq2-Js-zFC" secondAttribute="trailing" id="xjI-0q-DvL"/>
                                                             <constraint firstItem="z67-bM-fha" firstAttribute="leading" secondItem="XGA-h9-wGc" secondAttribute="leading" id="y4E-Jj-pAX"/>
@@ -80,17 +80,17 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-cn-3QI">
-                                                        <rect key="frame" x="30" y="110.5" width="165.5" height="90.5"/>
+                                                        <rect key="frame" x="30" y="107.5" width="165.5" height="88"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-B4-mkZ">
-                                                                <rect key="frame" x="15" y="15" width="150.5" height="22.5"/>
+                                                                <rect key="frame" x="15" y="5" width="150.5" height="31"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-QL-QTT">
-                                                                <rect key="frame" x="0.0" y="37.5" width="165.5" height="41"/>
-                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
+                                                                <rect key="frame" x="0.0" y="36" width="165.5" height="39.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="28"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -102,7 +102,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="JO3-QL-QTT" secondAttribute="trailing" id="VFQ-Lj-INk"/>
                                                             <constraint firstItem="JO3-QL-QTT" firstAttribute="top" secondItem="cpK-B4-mkZ" secondAttribute="bottom" id="g1c-7t-LTy"/>
                                                             <constraint firstAttribute="trailing" secondItem="cpK-B4-mkZ" secondAttribute="trailing" id="lPq-6i-WGT"/>
-                                                            <constraint firstItem="cpK-B4-mkZ" firstAttribute="top" secondItem="2r4-cn-3QI" secondAttribute="top" constant="15" id="pBi-Fl-WFc"/>
+                                                            <constraint firstItem="cpK-B4-mkZ" firstAttribute="top" secondItem="2r4-cn-3QI" secondAttribute="top" constant="5" id="pBi-Fl-WFc"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -112,16 +112,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-89-cIo">
-                                                        <rect key="frame" x="218.5" y="110.5" width="165.5" height="90.5"/>
+                                                        <rect key="frame" x="218.5" y="107.5" width="165.5" height="88"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d35-qL-Gf1">
-                                                                <rect key="frame" x="0.0" y="37.5" width="165.5" height="41"/>
-                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
+                                                                <rect key="frame" x="0.0" y="36" width="165.5" height="39.5"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="28"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-uW-9EG">
-                                                                <rect key="frame" x="15" y="15" width="150.5" height="22.5"/>
+                                                                <rect key="frame" x="15" y="5" width="150.5" height="31"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" name="heroBackground4"/>
                                                         <constraints>
-                                                            <constraint firstItem="pMH-uW-9EG" firstAttribute="top" secondItem="NHD-89-cIo" secondAttribute="top" constant="15" id="0zl-NY-s0g"/>
+                                                            <constraint firstItem="pMH-uW-9EG" firstAttribute="top" secondItem="NHD-89-cIo" secondAttribute="top" constant="5" id="0zl-NY-s0g"/>
                                                             <constraint firstItem="d35-qL-Gf1" firstAttribute="leading" secondItem="NHD-89-cIo" secondAttribute="leading" id="1ry-Od-joQ"/>
                                                             <constraint firstItem="d35-qL-Gf1" firstAttribute="top" secondItem="pMH-uW-9EG" secondAttribute="bottom" id="6RT-2Y-cCo"/>
                                                             <constraint firstAttribute="trailing" secondItem="d35-qL-Gf1" secondAttribute="trailing" id="PF0-nI-wQs"/>
@@ -144,17 +144,17 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEp-Ob-7ad">
-                                                        <rect key="frame" x="218.5" y="10" width="165.5" height="90.5"/>
+                                                        <rect key="frame" x="218.5" y="10" width="165.5" height="87.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07D-kk-frs">
-                                                                <rect key="frame" x="15" y="15" width="143" height="24"/>
+                                                                <rect key="frame" x="15" y="5" width="143" height="33"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z44-c2-DdM">
-                                                                <rect key="frame" x="0.0" y="39" width="165.5" height="35.5"/>
-                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="31"/>
+                                                                <rect key="frame" x="0.0" y="38" width="165.5" height="34"/>
+                                                                <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="28"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -163,7 +163,7 @@
                                                         <constraints>
                                                             <constraint firstItem="07D-kk-frs" firstAttribute="leading" secondItem="YEp-Ob-7ad" secondAttribute="leading" constant="15" id="UjF-Ft-Nb4"/>
                                                             <constraint firstItem="z44-c2-DdM" firstAttribute="leading" secondItem="YEp-Ob-7ad" secondAttribute="leading" id="o0B-aR-qlj"/>
-                                                            <constraint firstItem="07D-kk-frs" firstAttribute="top" secondItem="YEp-Ob-7ad" secondAttribute="top" constant="15" id="rHI-JX-vEK"/>
+                                                            <constraint firstItem="07D-kk-frs" firstAttribute="top" secondItem="YEp-Ob-7ad" secondAttribute="top" constant="5" id="rHI-JX-vEK"/>
                                                             <constraint firstItem="z44-c2-DdM" firstAttribute="top" secondItem="07D-kk-frs" secondAttribute="bottom" id="tsF-fG-n2U"/>
                                                             <constraint firstAttribute="trailing" secondItem="z44-c2-DdM" secondAttribute="trailing" id="xDC-Yd-Y9P"/>
                                                         </constraints>
@@ -204,19 +204,19 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero's Career Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-E4-qsQ">
-                                                <rect key="frame" x="20" y="214.5" width="374" height="38"/>
+                                                <rect key="frame" x="20" y="219.5" width="374" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Description" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izP-sy-zGd">
-                                                <rect key="frame" x="20" y="10" width="384" height="35.5"/>
+                                                <rect key="frame" x="20" y="10" width="384" height="40.5"/>
                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WL0-ky-RXk">
-                                                <rect key="frame" x="10" y="35.5" width="394" height="179"/>
+                                                <rect key="frame" x="10" y="40.5" width="394" height="179"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="14"/>
@@ -236,11 +236,11 @@
                                             <constraint firstItem="izP-sy-zGd" firstAttribute="leading" secondItem="SMg-Oa-v1P" secondAttribute="leading" constant="20" id="SWP-uq-dKA"/>
                                             <constraint firstItem="hCR-90-jKw" firstAttribute="leading" secondItem="SMg-Oa-v1P" secondAttribute="leading" id="V9E-ln-u06"/>
                                             <constraint firstAttribute="trailing" secondItem="7dm-E4-qsQ" secondAttribute="trailing" constant="20" id="etY-lZ-feB"/>
-                                            <constraint firstItem="izP-sy-zGd" firstAttribute="height" secondItem="SMg-Oa-v1P" secondAttribute="height" multiplier="0.07" id="giw-yq-7Rc"/>
+                                            <constraint firstItem="izP-sy-zGd" firstAttribute="height" secondItem="SMg-Oa-v1P" secondAttribute="height" multiplier="0.08" id="giw-yq-7Rc"/>
                                             <constraint firstItem="izP-sy-zGd" firstAttribute="top" secondItem="SMg-Oa-v1P" secondAttribute="top" constant="10" id="hAU-tn-hHV"/>
                                             <constraint firstItem="WL0-ky-RXk" firstAttribute="height" secondItem="SMg-Oa-v1P" secondAttribute="height" multiplier="0.35" id="mzK-g5-UL5"/>
                                             <constraint firstItem="7dm-E4-qsQ" firstAttribute="top" secondItem="WL0-ky-RXk" secondAttribute="bottom" id="pIZ-gY-bfc"/>
-                                            <constraint firstItem="7dm-E4-qsQ" firstAttribute="height" secondItem="izP-sy-zGd" secondAttribute="height" multiplier="1.05882" id="qro-MQ-fUi"/>
+                                            <constraint firstItem="7dm-E4-qsQ" firstAttribute="height" secondItem="izP-sy-zGd" secondAttribute="height" id="qro-MQ-fUi"/>
                                         </constraints>
                                     </view>
                                 </subviews>
