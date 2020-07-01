@@ -8,7 +8,6 @@ struct Constants {
   static let timeStamp = "&ts=ts2020"
   static let hash = "&hash=cb0c0b92b46b5a48de738ca8d92470e6"
   static let urlError = "Url is not correct"
-  static let heroBackground = "heroBackground1"
   static let orderByLatestParameter = "&orderBy=-modified"
   static let comicFormat = "&format=comic&startYear=2018&offset=101&limit=5"
   static let logoImage = "logo"
