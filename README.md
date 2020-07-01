@@ -8,12 +8,11 @@ Build status of continus integration with Travis
 [![Build Status](https://travis-ci.com/maurovz/MarvelHeroes.svg?branch=develop)](https://travis-ci.com/maurovz/MarvelHeroes)
  
 ## Screenshots
-![](https://i.imgur.com/U2Pded7.png)
-![](https://i.imgur.com/PV4qNhF.png)
+![](https://i.imgur.com/g5A73I2.png)
 
 ## Features
 MVVM Architecture
-SwiftUI & Combine usage
+UIKit & Combine usage
 Minimal third-party frameworks. Working on replacing the only framework (Kingfisher) with a custom framework.
 Unit Testing
 
