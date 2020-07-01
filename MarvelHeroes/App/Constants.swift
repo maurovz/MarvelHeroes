@@ -14,4 +14,6 @@ struct Constants {
   static let noImageAvailable = "image_not_available"
   static let modifiedLabel = "Modified: "
   static let unkownModificationDate = "Unknown"
+  static let sceneDefaultConfiguration = "Default Configuration"
+  static let dequeErrorMessage = "Error dequeuing Reusable Cell"
 }

@@ -60,10 +60,12 @@ class HeroListViewModel: ObservableObject {
   }
 
   private func deleteSavedHeroesFromCoreData(coreDataServices: CoreDataServices) -> Bool {
-    return coreDataServices.deleteEntityFromCoreData(entity: "HeroDetails")
+    let heroDetailEntityName = "HeroDetails"
+    return coreDataServices.deleteEntityFromCoreData(entity: heroDetailEntityName)
   }
 
   private func deleteSavedComicsFromCoreData(coreDataServices: CoreDataServices) -> Bool {
-    return coreDataServices.deleteEntityFromCoreData(entity: "ComicDetails")
+    let comicDetailEntityName = "ComicDetails"
+    return coreDataServices.deleteEntityFromCoreData(entity: comicDetailEntityName)
   }
 }

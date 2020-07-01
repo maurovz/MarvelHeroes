@@ -26,7 +26,7 @@ class HeroListViewController: UIViewController {
     let heroDetailViewSegueIdentifier = "HeroDetailSegue"
     if segue.identifier == heroDetailViewSegueIdentifier {
       if let heroDetailViewController = segue.destination as? HeroDetailViewController {
-        heroDetailViewController.heroDetailsViewModel = heroListViewModel.heroes[selectedHeroIndex]
+        heroDetailViewController.setupHeroViewModel(heroDetailsViewModel: heroListViewModel.heroes[selectedHeroIndex])
       }
     }
   }
@@ -142,7 +142,7 @@ extension HeroListViewController: UICollectionViewDataSource {
       guard let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: FeaturedCollectionViewCell.identifier, for: indexPath) as? FeaturedCollectionViewCell
         else {
-          fatalError("Error dequeuing Reusable Cell")
+          fatalError(Constants.dequeErrorMessage)
       }
       let comics = heroListViewModel.comics
       cell.configure(imageUrl: comics[indexPath.row].thumbnailImage)
@@ -151,7 +151,7 @@ extension HeroListViewController: UICollectionViewDataSource {
       guard let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: HeroListCollectionViewCell.identifier, for: indexPath) as? HeroListCollectionViewCell
         else {
-          fatalError("Error dequeuing Reusable Cell")
+          fatalError(Constants.dequeErrorMessage)
       }
       let hero = self.heroListViewModel.heroes[indexPath.row]
       cell.configure(imageUrl: hero.thumbnailImage, heroName: hero.name, modifiedDate: hero.modified)
@@ -168,6 +168,7 @@ extension HeroListViewController: UICollectionViewDelegate {
 
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     selectedHeroIndex = indexPath.row
-    performSegue(withIdentifier: "HeroDetailSegue", sender: self)
+    let heroDetailViewSegueIdentifier = "HeroDetailSegue"
+    performSegue(withIdentifier: heroDetailViewSegueIdentifier, sender: self)
   }
 }

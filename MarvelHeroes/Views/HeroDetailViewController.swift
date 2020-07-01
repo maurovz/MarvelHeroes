@@ -7,8 +7,7 @@ class HeroDetailViewController: UIViewController {
   @IBOutlet weak var seriesCountLabel: UILabel!
   @IBOutlet weak var eventsCountLabel: UILabel!
   @IBOutlet weak var storiesCountLabel: UILabel!
-
-  var heroDetailsViewModel: HeroDetailsViewModel?
+  private var heroDetailsViewModel: HeroDetailsViewModel?
 
   override func viewDidLoad() {
     super.viewDidLoad()
