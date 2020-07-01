@@ -12,4 +12,6 @@ struct Constants {
   static let comicFormat = "&format=comic&startYear=2018&offset=101&limit=5"
   static let logoImage = "logo"
   static let noImageAvailable = "image_not_available"
+  static let modifiedLabel = "Modified: "
+  static let unkownModificationDate = "Unknown"
 }

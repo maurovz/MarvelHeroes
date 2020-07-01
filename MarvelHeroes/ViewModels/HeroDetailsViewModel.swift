@@ -17,6 +17,11 @@ class HeroDetailsViewModel: ObservableObject {
     return hero.heroDescription ?? ""
   }
 
+  var modified: String {
+    guard let modifiedDate = hero.modified else { return Constants.unkownModificationDate }
+    return StringDateFormater.convertDateToString(date: modifiedDate) ?? Constants.unkownModificationDate
+  }
+
   var thumbnailImage: String {
     return hero.thumbnailURL ?? ""
   }

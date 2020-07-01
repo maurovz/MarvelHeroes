@@ -11,6 +11,7 @@
         <attribute name="events" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="heroDescription" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="modified" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="series" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="stories" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
@@ -18,6 +19,6 @@
     </entity>
     <elements>
         <element name="ComicDetails" positionX="-45" positionY="27" width="128" height="103"/>
-        <element name="HeroDetails" positionX="-45" positionY="0" width="128" height="163"/>
+        <element name="HeroDetails" positionX="-45" positionY="0" width="128" height="178"/>
     </elements>
 </model>

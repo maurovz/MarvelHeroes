@@ -4,6 +4,7 @@ struct Hero: Decodable {
   let heroID: Int
   let name: String
   let description: String
+  let modified: String
   let thumbnail: Thumbnail
   let series: Available
   let comics: Available
@@ -14,6 +15,7 @@ struct Hero: Decodable {
     case heroID = "id"
     case name
     case description
+    case modified
     case thumbnail
     case series
     case comics

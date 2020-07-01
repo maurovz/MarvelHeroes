@@ -154,7 +154,7 @@ extension HeroListViewController: UICollectionViewDataSource {
           fatalError("Error dequeuing Reusable Cell")
       }
       let hero = self.heroListViewModel.heroes[indexPath.row]
-      cell.configure(imageUrl: hero.thumbnailImage, heroName: hero.name)
+      cell.configure(imageUrl: hero.thumbnailImage, heroName: hero.name, modifiedDate: hero.modified)
       return cell
     }
   }

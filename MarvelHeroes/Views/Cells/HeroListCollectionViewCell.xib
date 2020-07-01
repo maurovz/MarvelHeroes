@@ -44,7 +44,7 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="2" height="-1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="created: 04 04 1986" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCw-fp-Ti6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modified: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCw-fp-Ti6">
                                 <rect key="frame" x="3" y="34" width="293" height="25"/>
                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                 <color key="textColor" name="heroBackground3"/>
@@ -82,8 +82,8 @@
             <size key="customSize" width="299" height="289"/>
             <connections>
                 <outlet property="blurrView" destination="hzo-Xm-hn1" id="jyK-xh-xhe"/>
-                <outlet property="creationDateLabel" destination="fCw-fp-Ti6" id="vP5-kv-jh8"/>
                 <outlet property="imageView" destination="S5Y-bp-0I3" id="ZuF-4x-Nbs"/>
+                <outlet property="modificationDateLabel" destination="fCw-fp-Ti6" id="1Sm-cR-PAD"/>
                 <outlet property="titleLabel" destination="4XA-bd-wKf" id="aAe-9v-oRE"/>
             </connections>
             <point key="canvasLocation" x="318.11594202898556" y="188.50446428571428"/>
