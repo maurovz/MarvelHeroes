@@ -7,13 +7,17 @@
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <entity name="HeroDetails" representedClassName="HeroDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="comics" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="events" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="heroDescription" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="series" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="stories" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="thumbnailURL" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="HeroDetails" positionX="-45" positionY="0" width="128" height="103"/>
         <element name="ComicDetails" positionX="-45" positionY="27" width="128" height="103"/>
+        <element name="HeroDetails" positionX="-45" positionY="0" width="128" height="163"/>
     </elements>
 </model>

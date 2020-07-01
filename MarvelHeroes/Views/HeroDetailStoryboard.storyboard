@@ -43,19 +43,19 @@
                                         <rect key="frame" x="0.0" y="341" width="414" height="511"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCR-90-jKw" userLabel="Career Overview View">
-                                                <rect key="frame" x="0.0" y="201.5" width="414" height="309.5"/>
+                                                <rect key="frame" x="0.0" y="252.5" width="414" height="258.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGA-h9-wGc">
-                                                        <rect key="frame" x="30" y="10" width="165.5" height="108"/>
+                                                        <rect key="frame" x="30" y="10" width="165.5" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq2-Js-zFC">
-                                                                <rect key="frame" x="15" y="15" width="150.5" height="27"/>
+                                                                <rect key="frame" x="15" y="15" width="150.5" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z67-bM-fha">
-                                                                <rect key="frame" x="0.0" y="42" width="165.5" height="48.5"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="165.5" height="41"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -80,16 +80,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r4-cn-3QI">
-                                                        <rect key="frame" x="30" y="128" width="165.5" height="108.5"/>
+                                                        <rect key="frame" x="30" y="110.5" width="165.5" height="90.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-B4-mkZ">
-                                                                <rect key="frame" x="15" y="15" width="150.5" height="27.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpK-B4-mkZ">
+                                                                <rect key="frame" x="15" y="15" width="150.5" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-QL-QTT">
-                                                                <rect key="frame" x="0.0" y="42.5" width="165.5" height="48.5"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="165.5" height="41"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -112,16 +112,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-89-cIo">
-                                                        <rect key="frame" x="218.5" y="128" width="165.5" height="108.5"/>
+                                                        <rect key="frame" x="218.5" y="110.5" width="165.5" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d35-qL-Gf1">
-                                                                <rect key="frame" x="0.0" y="42.5" width="165.5" height="48.5"/>
+                                                                <rect key="frame" x="0.0" y="37.5" width="165.5" height="41"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="33"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-uW-9EG">
-                                                                <rect key="frame" x="15" y="15" width="150.5" height="27.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMH-uW-9EG">
+                                                                <rect key="frame" x="15" y="15" width="150.5" height="22.5"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -144,16 +144,16 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YEp-Ob-7ad">
-                                                        <rect key="frame" x="218.5" y="10" width="165.5" height="108"/>
+                                                        <rect key="frame" x="218.5" y="10" width="165.5" height="90.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07D-kk-frs">
-                                                                <rect key="frame" x="15" y="15" width="143" height="29"/>
+                                                                <rect key="frame" x="15" y="15" width="143" height="24"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8623   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z44-c2-DdM">
-                                                                <rect key="frame" x="0.0" y="44" width="165.5" height="42"/>
+                                                                <rect key="frame" x="0.0" y="39" width="165.5" height="35.5"/>
                                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="31"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -204,7 +204,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero's Career Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-E4-qsQ">
-                                                <rect key="frame" x="20" y="163.5" width="374" height="38"/>
+                                                <rect key="frame" x="20" y="214.5" width="374" height="38"/>
                                                 <fontDescription key="fontDescription" name="AvengeanceHeroicAvengerBold" family="Avengeance Heroic Avenger" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -216,7 +216,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WL0-ky-RXk">
-                                                <rect key="frame" x="10" y="35.5" width="394" height="128"/>
+                                                <rect key="frame" x="10" y="35.5" width="394" height="179"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, laborum.</string>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,7 +239,7 @@
                                             <constraint firstAttribute="trailing" secondItem="7dm-E4-qsQ" secondAttribute="trailing" constant="20" id="etY-lZ-feB"/>
                                             <constraint firstItem="izP-sy-zGd" firstAttribute="height" secondItem="SMg-Oa-v1P" secondAttribute="height" multiplier="0.07" id="giw-yq-7Rc"/>
                                             <constraint firstItem="izP-sy-zGd" firstAttribute="top" secondItem="SMg-Oa-v1P" secondAttribute="top" constant="10" id="hAU-tn-hHV"/>
-                                            <constraint firstItem="WL0-ky-RXk" firstAttribute="height" secondItem="SMg-Oa-v1P" secondAttribute="height" multiplier="0.25" id="mzK-g5-UL5"/>
+                                            <constraint firstItem="WL0-ky-RXk" firstAttribute="height" secondItem="SMg-Oa-v1P" secondAttribute="height" multiplier="0.35" id="mzK-g5-UL5"/>
                                             <constraint firstItem="7dm-E4-qsQ" firstAttribute="top" secondItem="WL0-ky-RXk" secondAttribute="bottom" id="pIZ-gY-bfc"/>
                                             <constraint firstItem="7dm-E4-qsQ" firstAttribute="height" secondItem="izP-sy-zGd" secondAttribute="height" multiplier="1.05882" id="qro-MQ-fUi"/>
                                         </constraints>
@@ -270,9 +270,11 @@
                     <navigationItem key="navigationItem" id="cCi-Ve-98y"/>
                     <connections>
                         <outlet property="comicCountLabel" destination="z67-bM-fha" id="wk5-Jg-1y2"/>
+                        <outlet property="eventsCountLabel" destination="JO3-QL-QTT" id="M6d-Yl-MPR"/>
                         <outlet property="heroCoverImageView" destination="YD3-qO-hrE" id="NZH-hh-mZP"/>
                         <outlet property="heroDescriptionTextView" destination="WL0-ky-RXk" id="awO-SC-pnf"/>
                         <outlet property="seriesCountLabel" destination="z44-c2-DdM" id="Z28-YU-ZJZ"/>
+                        <outlet property="storiesCountLabel" destination="d35-qL-Gf1" id="QX4-XK-G4t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pE5-Kf-1lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

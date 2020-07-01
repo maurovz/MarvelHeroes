@@ -21,4 +21,20 @@ class HeroDetailsViewModel: ObservableObject {
   var thumbnailImage: String {
     return hero.thumbnailURL ?? ""
   }
+
+  var comics: String {
+    return String(hero.comics)
+  }
+
+  var events: String {
+    return String(hero.events)
+  }
+
+  var stories: String {
+    return String(hero.stories)
+  }
+
+  var series: String {
+    return String(hero.series)
+  }
 }
