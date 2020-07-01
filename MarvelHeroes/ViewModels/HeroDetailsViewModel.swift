@@ -4,7 +4,6 @@ import SwiftUI
 class HeroDetailsViewModel: ObservableObject {
   @Published var hero: HeroDetails
   @Published var show = false
-  @Published var color: Color = Color(Constants.heroBackground)
 
   init(hero: HeroDetails) {
     self.hero = hero
@@ -18,7 +17,28 @@ class HeroDetailsViewModel: ObservableObject {
     return hero.heroDescription ?? ""
   }
 
+  var modified: String {
+    guard let modifiedDate = hero.modified else { return Constants.unkownModificationDate }
+    return StringDateFormater.convertDateToString(date: modifiedDate) ?? Constants.unkownModificationDate
+  }
+
   var thumbnailImage: String {
     return hero.thumbnailURL ?? ""
+  }
+
+  var comics: String {
+    return String(hero.comics)
+  }
+
+  var events: String {
+    return String(hero.events)
+  }
+
+  var stories: String {
+    return String(hero.stories)
+  }
+
+  var series: String {
+    return String(hero.series)
   }
 }

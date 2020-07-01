@@ -67,6 +67,12 @@
                                     <constraint firstAttribute="width" constant="345" id="ybi-mH-rRw"/>
                                 </constraints>
                             </pageControl>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sRK-4j-KTt">
+                                <rect key="frame" x="197" y="437" width="20" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sRK-4j-KTt" secondAttribute="height" multiplier="10:11" id="yhy-DL-qZf"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -75,10 +81,13 @@
                             <constraint firstItem="kLz-pT-1ME" firstAttribute="leading" secondItem="6nm-d7-QpN" secondAttribute="leading" id="MQp-v1-jcb"/>
                             <constraint firstItem="6nm-d7-QpN" firstAttribute="bottom" secondItem="zpg-l8-JWt" secondAttribute="bottom" id="ULi-Od-nQw"/>
                             <constraint firstItem="kLz-pT-1ME" firstAttribute="top" secondItem="6nm-d7-QpN" secondAttribute="top" id="WvG-Bu-AhG"/>
+                            <constraint firstItem="sRK-4j-KTt" firstAttribute="centerX" secondItem="yLj-Ff-a7L" secondAttribute="centerX" id="aQe-yO-rxm"/>
                             <constraint firstItem="kLz-pT-1ME" firstAttribute="height" secondItem="yLj-Ff-a7L" secondAttribute="height" multiplier="0.3" id="bEo-wN-A8X"/>
                             <constraint firstItem="zpg-l8-JWt" firstAttribute="leading" secondItem="6nm-d7-QpN" secondAttribute="leading" id="bZ6-cs-AVw"/>
+                            <constraint firstItem="sRK-4j-KTt" firstAttribute="centerY" secondItem="yLj-Ff-a7L" secondAttribute="centerY" id="c07-Q5-L15"/>
                             <constraint firstItem="GYs-C8-NVS" firstAttribute="leading" secondItem="6nm-d7-QpN" secondAttribute="leading" constant="20" id="dZo-M4-G6t"/>
                             <constraint firstItem="kLz-pT-1ME" firstAttribute="trailing" secondItem="6nm-d7-QpN" secondAttribute="trailing" id="hCF-sl-x89"/>
+                            <constraint firstItem="sRK-4j-KTt" firstAttribute="height" secondItem="yLj-Ff-a7L" secondAttribute="height" multiplier="0.025" id="iuY-M3-res"/>
                             <constraint firstItem="6nm-d7-QpN" firstAttribute="trailing" secondItem="GYs-C8-NVS" secondAttribute="trailing" constant="20" id="kEG-xs-ouH"/>
                             <constraint firstItem="GYs-C8-NVS" firstAttribute="top" secondItem="kLz-pT-1ME" secondAttribute="bottom" constant="15" id="nbV-h2-roY"/>
                             <constraint firstItem="zpg-l8-JWt" firstAttribute="top" secondItem="GYs-C8-NVS" secondAttribute="bottom" constant="10" id="q5J-Ef-Udy"/>
@@ -88,18 +97,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="0O8-4G-ZG2"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="sRK-4j-KTt" id="p45-px-DhK"/>
                         <outlet property="featuredHeroesCollectionView" destination="kLz-pT-1ME" id="Dik-bq-WJH"/>
                         <outlet property="featuredPageControl" destination="nBe-In-nPt" id="1O5-cL-fbx"/>
                         <outlet property="heroListCollectionView" destination="zpg-l8-JWt" id="n2k-XB-8pF"/>
+                        <segue destination="OKS-X5-6IB" kind="show" identifier="HeroDetailSegue" id="SQd-RD-2oL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="biC-sc-mFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68.115942028985515" y="-37.5"/>
+            <point key="canvasLocation" x="141" y="-38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jMP-di-0FR">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJ5-U3-d6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pVh-yc-Vyi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="6kJ-2E-yx7">
@@ -111,9 +123,18 @@
                         <segue destination="Adv-Kf-Ote" kind="relationship" relationship="rootViewController" id="cYq-mj-R9d"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GJ5-U3-d6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-842.02898550724649" y="-37.5"/>
+        </scene>
+        <!--HeroDetailStoryboard-->
+        <scene sceneID="gm3-uF-apN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HeroDetailStoryboard" id="OKS-X5-6IB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9fb-e6-owY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMS-cJ-CYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="899" y="-36"/>
         </scene>
     </scenes>
 </document>

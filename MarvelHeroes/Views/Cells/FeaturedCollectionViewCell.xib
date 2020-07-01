@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="349" height="123"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comic" translatesAutoresizingMaskIntoConstraints="NO" id="1Kk-Ve-Eup">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Kk-Ve-Eup">
                         <rect key="frame" x="0.0" y="0.0" width="349" height="423"/>
                     </imageView>
                 </subviews>
@@ -35,7 +35,4 @@
             <point key="canvasLocation" x="354.34782608695656" y="136.94196428571428"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="comic" width="1047" height="1600"/>
-    </resources>
 </document>

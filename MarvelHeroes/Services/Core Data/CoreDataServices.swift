@@ -3,14 +3,21 @@ import CoreData
 
 struct CoreDataServices {
   func saveHeroesToCoreData(heroes: [Hero]) {
+    let dotSeparator = "."
     let context = CoreDataStack.persistentContainer.viewContext
-    for hero in heroes where !hero.description.isEmpty {
-      let heroDetails = HeroDetails(context: context)
-      heroDetails.name = hero.name
-      heroDetails.heroDescription = hero.description
-      heroDetails.id = Int64(hero.heroID)
-      heroDetails.thumbnailURL = hero.thumbnail.path + "." + hero.thumbnail.imageExtension
-      CoreDataStack.saveContext()
+    for hero in heroes where !hero.description.isEmpty
+      && !hero.thumbnail.path.contains(Constants.noImageAvailable) {
+        let heroDetails = HeroDetails(context: context)
+        heroDetails.name = hero.name
+        heroDetails.heroDescription = hero.description
+        heroDetails.id = Int64(hero.heroID)
+        heroDetails.modified = StringDateFormater.convertStringToDate(string: hero.modified)
+        heroDetails.thumbnailURL = hero.thumbnail.path + dotSeparator + hero.thumbnail.imageExtension
+        heroDetails.comics = Int64(hero.comics.available)
+        heroDetails.series = Int64(hero.series.available)
+        heroDetails.events = Int64(hero.events.available)
+        heroDetails.stories = Int64(hero.stories.available)
+        CoreDataStack.saveContext()
     }
   }
 

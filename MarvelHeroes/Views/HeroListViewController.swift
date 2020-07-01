@@ -5,30 +5,43 @@ class HeroListViewController: UIViewController {
   @IBOutlet weak var featuredHeroesCollectionView: UICollectionView!
   @IBOutlet weak var heroListCollectionView: UICollectionView!
   @IBOutlet weak var featuredPageControl: UIPageControl!
-  private let screenSize = UIScreen.main.bounds
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   private let heroListViewModel = HeroListViewModel()
   private var cancellables: Set<AnyCancellable> = []
+  private var selectedHeroIndex = Int()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     setupCollectionView()
-    addNavigationBarLogo(image: UIImage(named: "logo"))
+    addNavigationBarLogo(image: UIImage(named: Constants.logoImage))
     setupPageControl()
-    bindHeroListViewModel()
+    bindViewModels()
   }
 
   override func viewDidAppear(_ animated: Bool) {
     setCurrentPageControlPage(page: 0)
   }
 
-  private func bindHeroListViewModel() {
-    heroListViewModel.$heroes.sink { _ in
+  private func bindViewModels() {
+    showActivityIndicator()
+    heroListViewModel.$heroes.sink { heroes in
+      if heroes.count > 0 { self.hideActivityIndicator() }
       self.heroListCollectionView.reloadData()
     }.store(in: &cancellables)
     heroListViewModel.$comics.sink { _ in
       self.featuredHeroesCollectionView.reloadData()
       self.setupPageControl()
     }.store(in: &cancellables)
+  }
+
+  private func showActivityIndicator() {
+    activityIndicator.isHidden = false
+    activityIndicator.startAnimating()
+  }
+
+  private func hideActivityIndicator() {
+    activityIndicator.isHidden = true
+    activityIndicator.stopAnimating()
   }
 
   private func setupPageControl() {
@@ -46,11 +59,13 @@ class HeroListViewController: UIViewController {
     self.navigationItem.titleView = imageView
   }
 
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    super.traitCollectionDidChange(previousTraitCollection)
-    guard previousTraitCollection != nil else { return }
-    heroListCollectionView?.collectionViewLayout.invalidateLayout()
-    featuredHeroesCollectionView?.collectionViewLayout.invalidateLayout()
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let heroDetailViewSegueIdentifier = "HeroDetailSegue"
+    if segue.identifier == heroDetailViewSegueIdentifier {
+      if let heroDetailViewController = segue.destination as? HeroDetailViewController {
+        heroDetailViewController.setupHeroViewModel(heroDetailsViewModel: heroListViewModel.heroes[selectedHeroIndex])
+      }
+    }
   }
 }
 
@@ -59,7 +74,7 @@ extension HeroListViewController: UICollectionViewDelegateFlowLayout {
     setupLayouts()
     registerCollectionViewCellsNibs()
   }
-  
+
   private func setupLayouts() {
     let layout = UICollectionViewFlowLayout()
     layout.minimumInteritemSpacing = 5
@@ -132,7 +147,7 @@ extension HeroListViewController: UICollectionViewDataSource {
       guard let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: FeaturedCollectionViewCell.identifier, for: indexPath) as? FeaturedCollectionViewCell
         else {
-          fatalError("Error dequeuing Reusable Cell")
+          fatalError(Constants.dequeErrorMessage)
       }
       let comics = heroListViewModel.comics
       cell.configure(imageUrl: comics[indexPath.row].thumbnailImage)
@@ -141,10 +156,10 @@ extension HeroListViewController: UICollectionViewDataSource {
       guard let cell = collectionView.dequeueReusableCell(
         withReuseIdentifier: HeroListCollectionViewCell.identifier, for: indexPath) as? HeroListCollectionViewCell
         else {
-          fatalError("Error dequeuing Reusable Cell")
+          fatalError(Constants.dequeErrorMessage)
       }
       let hero = self.heroListViewModel.heroes[indexPath.row]
-      cell.configure(imageUrl: hero.thumbnailImage, heroName: hero.name)
+      cell.configure(imageUrl: hero.thumbnailImage, heroName: hero.name, modifiedDate: hero.modified)
       return cell
     }
   }
@@ -154,5 +169,11 @@ extension HeroListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView,
                       willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     setCurrentPageControlPage(page: indexPath.row)
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    selectedHeroIndex = indexPath.row
+    let heroDetailViewSegueIdentifier = "HeroDetailSegue"
+    performSegue(withIdentifier: heroDetailViewSegueIdentifier, sender: self)
   }
 }
