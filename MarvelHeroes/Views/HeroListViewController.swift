@@ -5,7 +5,7 @@ class HeroListViewController: UIViewController {
   @IBOutlet weak var featuredHeroesCollectionView: UICollectionView!
   @IBOutlet weak var heroListCollectionView: UICollectionView!
   @IBOutlet weak var featuredPageControl: UIPageControl!
-  private let screenSize = UIScreen.main.bounds
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   private let heroListViewModel = HeroListViewModel()
   private var cancellables: Set<AnyCancellable> = []
   private var selectedHeroIndex = Int()
@@ -15,30 +15,33 @@ class HeroListViewController: UIViewController {
     setupCollectionView()
     addNavigationBarLogo(image: UIImage(named: Constants.logoImage))
     setupPageControl()
-    bindHeroListViewModel()
+    bindViewModels()
   }
 
   override func viewDidAppear(_ animated: Bool) {
     setCurrentPageControlPage(page: 0)
   }
 
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let heroDetailViewSegueIdentifier = "HeroDetailSegue"
-    if segue.identifier == heroDetailViewSegueIdentifier {
-      if let heroDetailViewController = segue.destination as? HeroDetailViewController {
-        heroDetailViewController.setupHeroViewModel(heroDetailsViewModel: heroListViewModel.heroes[selectedHeroIndex])
-      }
-    }
-  }
-
-  private func bindHeroListViewModel() {
-    heroListViewModel.$heroes.sink { _ in
+  private func bindViewModels() {
+    showActivityIndicator()
+    heroListViewModel.$heroes.sink { heroes in
+      if heroes.count > 0 { self.hideActivityIndicator() }
       self.heroListCollectionView.reloadData()
     }.store(in: &cancellables)
     heroListViewModel.$comics.sink { _ in
       self.featuredHeroesCollectionView.reloadData()
       self.setupPageControl()
     }.store(in: &cancellables)
+  }
+
+  private func showActivityIndicator() {
+    activityIndicator.isHidden = false
+    activityIndicator.startAnimating()
+  }
+
+  private func hideActivityIndicator() {
+    activityIndicator.isHidden = true
+    activityIndicator.stopAnimating()
   }
 
   private func setupPageControl() {
@@ -56,11 +59,13 @@ class HeroListViewController: UIViewController {
     self.navigationItem.titleView = imageView
   }
 
-  override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-    super.traitCollectionDidChange(previousTraitCollection)
-    guard previousTraitCollection != nil else { return }
-    heroListCollectionView?.collectionViewLayout.invalidateLayout()
-    featuredHeroesCollectionView?.collectionViewLayout.invalidateLayout()
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let heroDetailViewSegueIdentifier = "HeroDetailSegue"
+    if segue.identifier == heroDetailViewSegueIdentifier {
+      if let heroDetailViewController = segue.destination as? HeroDetailViewController {
+        heroDetailViewController.setupHeroViewModel(heroDetailsViewModel: heroListViewModel.heroes[selectedHeroIndex])
+      }
+    }
   }
 }
 
