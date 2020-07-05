@@ -11,7 +11,7 @@ struct CoreDataServices {
         heroDetails.name = hero.name
         heroDetails.heroDescription = hero.description
         heroDetails.id = Int64(hero.heroID)
-        heroDetails.modified = StringDateFormater.convertStringToDate(string: hero.modified)
+        heroDetails.modified = hero.modified.dateFromString
         heroDetails.thumbnailURL = hero.thumbnail.path + dotSeparator + hero.thumbnail.imageExtension
         heroDetails.comics = Int64(hero.comics.available)
         heroDetails.series = Int64(hero.series.available)
