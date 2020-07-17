@@ -25,12 +25,16 @@ class HeroListViewController: UIViewController {
   private func bindViewModels() {
     showActivityIndicator()
     heroListViewModel.$heroes.sink { heroes in
-      if heroes.count > 0 { self.hideActivityIndicator() }
-      self.heroListCollectionView.reloadData()
+      DispatchQueue.main.async {
+        if heroes.count > 0 { self.hideActivityIndicator() }
+        self.heroListCollectionView.reloadData()
+      }
     }.store(in: &cancellables)
     heroListViewModel.$comics.sink { _ in
-      self.featuredHeroesCollectionView.reloadData()
-      self.setupPageControl()
+      DispatchQueue.main.async {
+        self.featuredHeroesCollectionView.reloadData()
+        self.setupPageControl()
+      }
     }.store(in: &cancellables)
   }
 
