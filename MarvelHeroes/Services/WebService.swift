@@ -18,16 +18,12 @@ class WebService {
     }
     httpClient.get(url: url) { data, error in
       guard let data = data, error == nil else {
-        DispatchQueue.main.async {
           completion(nil, .noNetwork)
-        }
         return
       }
       do {
         let heroes = try JSONDecoder().decode(HeroAPIResponse.self, from: data)
-        DispatchQueue.main.async {
-          completion(heroes.data.results, nil)
-        }
+        completion(heroes.data.results, nil)
       } catch {
         completion(nil, .decodingError)
       }
@@ -40,16 +36,12 @@ class WebService {
     }
     httpClient.get(url: url) { data, error in
       guard let data = data, error == nil else {
-        DispatchQueue.main.async {
           completion(nil, .noNetwork)
-        }
         return
       }
       do {
         let comics = try JSONDecoder().decode(ComicAPIResponse.self, from: data)
-        DispatchQueue.main.async {
           completion(comics.data.results, nil)
-        }
       } catch {
         completion(nil, .decodingError)
       }
